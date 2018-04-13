@@ -1,0 +1,54 @@
+<?php
+
+namespace nickurt\OpenProvider;
+
+class ServiceProvider extends \Illuminate\Support\ServiceProvider
+{
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    protected $defer = false;
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->singleton('nickurt\OpenProvider\OpenProvider', function ($app) {
+            $openProvider = new OpenProvider($app);
+            $openProvider->connection($openProvider->getDefaultConnection());
+
+            return $openProvider;
+        });
+
+        $this->app->alias('nickurt\OpenProvider\OpenProvider', 'OpenProvider');
+    }
+
+    /**
+     * Bootstrap the application events.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->loadTranslationsFrom(__DIR__.'/../src/Resources/Lang', 'openprovider');
+
+        $this->publishes([
+            __DIR__.'/../src/Resources/Lang' => resource_path('lang/vendor/openprovider'),
+        ], 'config');
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['nickurt\OpenProvider\OpenProvider', 'OpenProvider'];
+    }
+}
