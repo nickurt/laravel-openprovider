@@ -35,10 +35,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__.'/../src/Resources/Lang', 'openprovider');
-
         $this->publishes([
-            __DIR__.'/../src/Resources/Lang' => resource_path('lang/vendor/openprovider'),
+            __DIR__.'/../config/openprovider.php' => config_path('openprovider.php')
         ], 'config');
     }
 
