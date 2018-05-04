@@ -2,50 +2,55 @@
 
 namespace nickurt\OpenProvider\Api;
 
-class SpamExperts extends Operator
+class SpamExperts extends AbstractApi
 {
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createDomainSe($params)
     {
-        return $this->client->request(['createDomainSeRequest' => $params]);
+        return $this->post(['createDomainSeRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteDomainSe($params)
     {
-        return $this->client->request(['deleteDomainSeRequest' => $params]);
+        return $this->post(['deleteDomainSeRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function generateSeLoginUrl($params)
     {
-        return $this->client->request(['generateSeLoginUrlRequest' => $params]);
+        return $this->post(['generateSeLoginUrlRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function modifyDomainSe($params)
     {
-        return $this->client->request(['modifyDomainSeRequest' => $params]);
+        return $this->post(['modifyDomainSeRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveDomainSe($params)
     {
-        return $this->client->request(['retrieveDomainSeRequest' => $params]);
+        return $this->post(['retrieveDomainSeRequest' => $params]);
     }
 }

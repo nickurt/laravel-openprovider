@@ -2,32 +2,35 @@
 
 namespace nickurt\OpenProvider\Api;
 
-class Tags extends Operator
+class Tags extends AbstractApi
 {
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createTag($params)
     {
-        return $this->client->request(['createTagRequest' => $params]);
+        return $this->post(['createTagRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteTag($params)
     {
-        return $this->client->request(['deleteTagRequest' => $params]);
+        return $this->post(['deleteTagRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchTagRequest($params)
     {
-        return $this->client->request(['searchTagRequest' => $params]);
+        return $this->post(['searchTagRequest' => $params]);
     }
 }

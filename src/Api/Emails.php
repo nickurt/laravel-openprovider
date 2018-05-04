@@ -2,32 +2,35 @@
 
 namespace nickurt\OpenProvider\Api;
 
-class Emails extends Operator
+class Emails extends AbstractApi
 {
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function restartCustomerEmailVerification($params)
     {
-        return $this->client->request(['restartCustomerEmailVerificationRequest' => $params]);
+        return $this->post(['restartCustomerEmailVerificationRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchEmailVerificationDomain($params)
     {
-        return $this->client->request(['searchEmailVerificationDomainRequest' => $params]);
+        return $this->post(['searchEmailVerificationDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function startCustomerEmailVerification($params)
     {
-        return $this->client->request(['startCustomerEmailVerificationRequest' => $params]);
+        return $this->post(['startCustomerEmailVerificationRequest' => $params]);
     }
 }

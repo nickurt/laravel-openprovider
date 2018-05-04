@@ -2,167 +2,185 @@
 
 namespace nickurt\OpenProvider\Api;
 
-class Domains extends Operator
+class Domains extends AbstractApi
 {
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function approveTransferDomain($params)
     {
-        return $this->client->request(['approveTransferDomainRequest' => $params]);
+        return $this->post(['approveTransferDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function checkDomain($params)
     {
-        return $this->client->request(['checkDomainRequest' => $params]);
+        return $this->post(['checkDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createDomain($params)
     {
-        return $this->client->request(['createDomainRequest' => $params]);
+        return $this->post(['createDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteDomain($params)
     {
-        return $this->client->request(['deleteDomainRequest' => $params]);
+        return $this->post(['deleteDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function modifyDomain($params)
     {
-        return $this->client->request(['modifyDomainRequest' => $params]);
+        return $this->post(['modifyDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function renewDomain($params)
     {
-        return $this->client->request(['renewDomainRequest' => $params]);
+        return $this->post(['renewDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function requestAuthCodeDomain($params)
     {
-        return $this->client->request(['requestAuthCodeDomainRequest' => $params]);
+        return $this->post(['requestAuthCodeDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function resetAuthCodeDomain($params)
     {
-        return $this->client->request(['resetAuthCodeDomainRequest' => $params]);
+        return $this->post(['resetAuthCodeDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function restoreDomain($params)
     {
-        return $this->client->request(['restoreDomainRequest' => $params]);
+        return $this->post(['restoreDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveAdditionalDataDomain($params)
     {
-        return $this->client->request(['retrieveAdditionalDataDomainRequest' => $params]);
+        return $this->post(['retrieveAdditionalDataDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveCustomerAdditionalDataDomain($params)
     {
-        return $this->client->request(['retrieveCustomerAdditionalDataDomainRequest' => $params]);
+        return $this->post(['retrieveCustomerAdditionalDataDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveDomain($params)
     {
-        return $this->client->request(['retrieveDomainRequest' => $params]);
+        return $this->post(['retrieveDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrievePriceDomain($params)
     {
-        return $this->client->request(['retrievePriceDomainRequest' => $params]);
+        return $this->post(['retrievePriceDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchDomain($params)
     {
-        return $this->client->request(['searchDomainRequest' => $params]);
+        return $this->post(['searchDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function sendFoa1Domain($params)
     {
-        return $this->client->request(['sendFoa1DomainRequest' => $params]);
+        return $this->post(['sendFoa1DomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function tradeDomain($params)
     {
-        return $this->client->request(['tradeDomainRequest' => $params]);
+        return $this->post(['tradeDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function transferDomain($params)
     {
-        return $this->client->request(['transferDomainRequest' => $params]);
+        return $this->post(['transferDomainRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function tryAgainDomain($params)
     {
-        return $this->client->request(['tryAgainDomainRequest' => $params]);
+        return $this->post(['tryAgainDomainRequest' => $params]);
     }
 }

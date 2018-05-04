@@ -2,131 +2,145 @@
 
 namespace nickurt\OpenProvider\Api;
 
-class NameServers extends Operator
+class NameServers extends AbstractApi
 {
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createNs($params)
     {
-        return $this->client->request(['createNsRequest' => $params]);
+        return $this->post(['createNsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createTemplateDns($params)
     {
-        return $this->client->request(['createTemplateDnsRequest' => $params]);
+        return $this->post(['createTemplateDnsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createZoneDns($params)
     {
-        return $this->client->request(['createZoneDnsRequest' => $params]);
+        return $this->post(['createZoneDnsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteNs($params)
     {
-        return $this->client->request(['deleteNsRequest' => $params]);
+        return $this->post(['deleteNsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteTemplateDns($params)
     {
-        return $this->client->request(['deleteTemplateDnsRequest' => $params]);
+        return $this->post(['deleteTemplateDnsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteZoneDns($params)
     {
-        return $this->client->request(['deleteZoneDnsRequest' => $params]);
+        return $this->post(['deleteZoneDnsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function modifyNs($params)
     {
-        return $this->client->request(['modifyNsRequest' => $params]);
+        return $this->post(['modifyNsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function modifyZoneDns($params)
     {
-        return $this->client->request(['modifyZoneDnsRequest' => $params]);
+        return $this->post(['modifyZoneDnsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveNs($params)
     {
-        return $this->client->request(['retrieveNsRequest' => $params]);
+        return $this->post(['retrieveNsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveTemplateDns($params)
     {
-        return $this->client->request(['retrieveTemplateDnsRequest' => $params]);
+        return $this->post(['retrieveTemplateDnsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveZoneDns($params)
     {
-        return $this->client->request(['retrieveZoneDnsRequest' => $params]);
+        return $this->post(['retrieveZoneDnsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchNs($params)
     {
-        return $this->client->request(['searchNsRequest' => $params]);
+        return $this->post(['searchNsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchTemplateDns($params)
     {
-        return $this->client->request(['searchTemplateDnsRequest' => $params]);
+        return $this->post(['searchTemplateDnsRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchZoneDns($params)
     {
-        return $this->client->request(['searchZoneDnsRequest' => $params]);
+        return $this->post(['searchZoneDnsRequest' => $params]);
     }
 }

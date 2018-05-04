@@ -2,23 +2,25 @@
 
 namespace nickurt\OpenProvider\Api;
 
-class Extensions extends Operator
+class Extensions extends AbstractApi
 {
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveExtension($params)
     {
-        return $this->client->request(['retrieveExtensionRequest' => $params]);
+        return $this->post(['retrieveExtensionRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchExtension($params = [])
     {
-        return $this->client->request(['searchExtensionRequest' => $params]);
+        return $this->post(['searchExtensionRequest' => $params]);
     }
 }

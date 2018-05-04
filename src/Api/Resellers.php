@@ -2,83 +2,92 @@
 
 namespace nickurt\OpenProvider\Api;
 
-class Resellers extends Operator
+class Resellers extends AbstractApi
 {
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createContactReseller($params)
     {
-        return $this->client->request(['createContactResellerRequest' => $params]);
+        return $this->post(['createContactResellerRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteContactReseller($params)
     {
-        return $this->client->request(['deleteContactResellerRequest' => $params]);
+        return $this->post(['deleteContactResellerRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function modifyContactReseller($params)
     {
-        return $this->client->request(['modifyContactResellerRequest' => $params]);
+        return $this->post(['modifyContactResellerRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function modifyReseller($params)
     {
-        return $this->client->request(['modifyResellerRequest' => $params]);
+        return $this->post(['modifyResellerRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveContactReseller($params)
     {
-        return $this->client->request(['retrieveContactResellerRequest' => $params]);
+        return $this->post(['retrieveContactResellerRequest' => $params]);
     }
 
     /**
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveReseller()
     {
-        return $this->client->request(['retrieveResellerRequest' => []]);
+        return $this->post(['retrieveResellerRequest' => []]);
     }
 
     /**
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveSettingsReseller()
     {
-        return $this->client->request(['retrieveSettingsResellerRequest' => []]);
+        return $this->post(['retrieveSettingsResellerRequest' => []]);
     }
 
     /**
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveStatisticsReseller()
     {
-        return $this->client->request(['retrieveStatisticsResellerRequest' => []]);
+        return $this->post(['retrieveStatisticsResellerRequest' => []]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchContactReseller($params)
     {
-        return $this->client->request(['searchContactResellerRequest' => $params]);
+        return $this->post(['searchContactResellerRequest' => $params]);
     }
 }

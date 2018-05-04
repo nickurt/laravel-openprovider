@@ -35,7 +35,7 @@ class OpenProvider
      */
     public function __call($method, $args)
     {
-        return call_user_func_array([$this->base, $method], $args);
+        return call_user_func_array([$this->client, $method], $args);
     }
 
     /**
@@ -68,20 +68,19 @@ class OpenProvider
 
     /**
      * @param $name
-     * @return Api\Base
+     * @return Client
      */
     protected function resolve($name)
     {
         $config = $this->getConfig($name);
 
-        $this->base =  new \nickurt\OpenProvider\Api\Base();
-        $this->base->setHost($config['host']);
-        $this->base->setCredentials(
+        $this->client =  new \nickurt\OpenProvider\Client();
+        $this->client->setCredentials(
             $config['username'],
             $config['password']
         );
 
-        return $this->base;
+        return $this->client;
     }
 
     /**

@@ -2,86 +2,95 @@
 
 namespace nickurt\OpenProvider\Api;
 
-class Licenses extends Operator
+class Licenses extends AbstractApi
 {
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createLicense($params)
     {
-        return $this->client->request(['createLicenseRequest' => $params]);
+        return $this->post(['createLicenseRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteLicense($params)
     {
-        return $this->client->request(['deleteLicenseRequest' => $params]);
+        return $this->post(['deleteLicenseRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function editLicense($params)
     {
-        return $this->client->request(['editLicenseRequest' => $params]);
+        return $this->post(['editLicenseRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveKeyLicense($params)
     {
-        return $this->client->request(['retrieveKeyLicenseRequest' => $params]);
+        return $this->post(['retrieveKeyLicenseRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveLicense($params)
     {
-        return $this->client->request(['retrieveLicenseRequest' => $params]);
+        return $this->post(['retrieveLicenseRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveProductLicense($params)
     {
-        return $this->client->request(['retrieveProductLicenseRequest' => $params]);
+        return $this->post(['retrieveProductLicenseRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchLicense($params)
     {
-        return $this->client->request(['searchLicenseRequest' => $params]);
+        return $this->post(['searchLicenseRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchProductLicense($params = [])
     {
-        return $this->client->request(['searchProductLicenseRequest' => $params]);
+        return $this->post(['searchProductLicenseRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function upgradeLicense($params)
     {
-        return $this->client->request(['upgradeLicenseRequest' => $params]);
+        return $this->post(['upgradeLicenseRequest' => $params]);
     }
 }

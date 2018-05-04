@@ -2,50 +2,55 @@
 
 namespace nickurt\OpenProvider\Api;
 
-class Customers extends Operator
+class Customers extends AbstractApi
 {
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createCustomer($params)
     {
-        return $this->client->request(['createCustomerRequest' => $params]);
+        return $this->post(['createCustomerRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteCustomer($params)
     {
-        return $this->client->request(['deleteCustomerRequest' => $params]);
+        return $this->post(['deleteCustomerRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function modifyCustomer($params)
     {
-        return $this->client->request(['modifyCustomerRequest' => $params]);
+        return $this->post(['modifyCustomerRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function retrieveCustomer($params)
     {
-        return $this->client->request(['retrieveCustomerRequest' => $params]);
+        return $this->post(['retrieveCustomerRequest' => $params]);
     }
 
     /**
      * @param $params
      * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function searchCustomer($params)
     {
-        return $this->client->request(['searchCustomerRequest' => $params]);
+        return $this->post(['searchCustomerRequest' => $params]);
     }
 }
