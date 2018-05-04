@@ -8,6 +8,33 @@ class Customers extends Operator
      * @param $params
      * @return mixed
      */
+    public function createCustomer($params)
+    {
+        return $this->client->request(['createCustomerRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     */
+    public function deleteCustomer($params)
+    {
+        return $this->client->request(['deleteCustomerRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     */
+    public function modifyCustomer($params)
+    {
+        return $this->client->request(['modifyCustomerRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     */
     public function retrieveCustomer($params)
     {
         return $this->client->request(['retrieveCustomerRequest' => $params]);
@@ -19,8 +46,6 @@ class Customers extends Operator
      */
     public function searchCustomer($params)
     {
-        $params = ['offset' => 0, 'limit' => 10];
-
         return $this->client->request(['searchCustomerRequest' => $params]);
     }
 }
