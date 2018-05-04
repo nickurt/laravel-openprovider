@@ -38,6 +38,22 @@ class Base
     }
 
     /**
+     * @return Emails
+     */
+    public function emails()
+    {
+        return new \nickurt\OpenProvider\Api\Emails($this);
+    }
+
+    /**
+     * @return EmailsTemplates
+     */
+    public function emailstemplates()
+    {
+        return new \nickurt\OpenProvider\Api\EmailsTemplates($this);
+    }
+
+    /**
      * @return Extensions
      */
     public function extensions()
@@ -131,10 +147,26 @@ class Base
     }
 
     /**
+     * @return SpamExperts
+     */
+    public function spamexperts()
+    {
+        return new \nickurt\OpenProvider\Api\SpamExperts($this);
+    }
+
+    /**
      * @return Ssl
      */
     public function ssl()
     {
         return new \nickurt\OpenProvider\Api\Ssl($this);
+    }
+
+    /**
+     * @return Tags
+     */
+    public function tags()
+    {
+        return new \nickurt\OpenProvider\Api\Tags($this);
     }
 }
