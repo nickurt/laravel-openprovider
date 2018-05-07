@@ -4,8 +4,8 @@
 
 ### Table of contents
 - [Installation](#installation)
-- [Tests](#tests)
 - [Usage](#usage)
+- [Tests](#tests)
 
 ### Installation
 Install this package with composer:
@@ -37,12 +37,6 @@ OPENPROVIDER_DEFAULT_HOST=https://api.openprovider.eu
 OPENPROVIDER_DEFAULT_USERNAME=
 OPENPROVIDER_DEFAULT_PASSWORD=
 ```
-### Tests
-```sh
-phpunit
-```
-- - - 
-
 ## Usage
 ### Customers
 ```php
@@ -52,7 +46,6 @@ phpunit
 \OpenProvider::customers()->retrieveCustomer(array $params)
 \OpenProvider::customers()->searchCustomer(array $params)
 ```
-
 ### Domains
 ```php
 \OpenProvider::domains()->approveTransferDomain(array $params)
@@ -74,20 +67,30 @@ phpunit
 \OpenProvider::domains()->transferDomain(array $params)
 \OpenProvider::domains()->tryAgainDomain(array $params)
 ```
-
+### Emails
+```php
+\OpenProvider::emails()->restartCustomerEmailVerification(array $params)
+\OpenProvider::emails()->searchEmailVerificationDomain(array $params)
+\OpenProvider::emails()->startCustomerEmailVerification(array $params)
+```
+### Emails Templates
+```php
+\OpenProvider::emailstemplates()->createEmailTemplate(array $params)
+\OpenProvider::emailstemplates()->deleteEmailTemplate(array $params)
+\OpenProvider::emailstemplates()->modifyEmailTemplate(array $params)
+\OpenProvider::emailstemplates()->searchEmailTemplate(array $params)
+```
 ### Extensions
 ```php
 \OpenProvider::extensions()->searchExtension(array $params)
 \OpenProvider::extensions()->retrieveExtension(array $params)
 ```
-
 ### Financials
 ```php
 \OpenProvider::financials()->searchInvoiceReseller(array $params)
 \OpenProvider::financials()->searchPaymentReseller(array $params)
 \OpenProvider::financials()->searchTransactionReseller(array $params)
 ```
-
 ### Licenses
 ```php
 \OpenProvider::licenses()->createLicense(array $params)
@@ -97,10 +100,9 @@ phpunit
 \OpenProvider::licenses()->retrieveLicense(array $params)
 \OpenProvider::licenses()->retrieveProductLicense(array $params)
 \OpenProvider::licenses()->searchLicense(array $params)
-\OpenProvider::licenses()->retrieveProductLicense(array $params)
+\OpenProvider::licenses()->searchProductLicense(array $params)
 \OpenProvider::licenses()->upgradeLicense(array $params)
 ```
-
 ### NameServers
 ```php
 \OpenProvider::nameservers()->createNs(array $params)
@@ -118,18 +120,14 @@ phpunit
 \OpenProvider::nameservers()->searchTemplateDns(array $params)
 \OpenProvider::nameservers()->searchZoneDns(array $params)
 ```
-
 ### NameServers Groups
 ```php
 \OpenProvider::nameserversgroups()->createNsGroup(array $params)
 \OpenProvider::nameserversgroups()->deleteNsGroup(array $params)
-\OpenProvider::nameserversgroups()->createZoneDns(array $params)
 \OpenProvider::nameserversgroups()->modifyNsGroup(array $params)
 \OpenProvider::nameserversgroups()->retrieveNsGroup(array $params)
 \OpenProvider::nameserversgroups()->searchNsGroup(array $params)
-
 ```
-
 ### Resellers
 ```php
 \OpenProvider::resellers()->createContactReseller(array $params)
@@ -137,13 +135,20 @@ phpunit
 \OpenProvider::resellers()->modifyContactReseller(array $params)
 \OpenProvider::resellers()->modifyReseller(array $params)
 \OpenProvider::resellers()->retrieveContactReseller(array $params)
-\OpenProvider::resellers()->retrieveReseller(array $params)
-\OpenProvider::resellers()->retrieveSettingsReseller(array $params)
-\OpenProvider::resellers()->retrieveStatisticsReseller(array $params)
+\OpenProvider::resellers()->retrieveReseller()
+\OpenProvider::resellers()->retrieveSettingsReseller()
+\OpenProvider::resellers()->retrieveStatisticsReseller()
 \OpenProvider::resellers()->searchContactReseller(array $params)
 ```
-
-## SSL
+### Spam Experts 
+```php
+\OpenProvider::spamexperts()->createDomainSe(array $params)
+\OpenProvider::spamexperts()->deleteDomainSe(array $params)
+\OpenProvider::spamexperts()->generateSeLoginUrl(array $params)
+\OpenProvider::spamexperts()->modifyDomainSe(array $params)
+\OpenProvider::spamexperts()->retrieveDomainSe(array $params)
+```
+### SSL
 ```php
 \OpenProvider::ssl()->cancelSslCert(array $params)
 \OpenProvider::ssl()->changeApproverEmailAddressSslCert(array $params)
@@ -161,12 +166,14 @@ phpunit
 \OpenProvider::ssl()->searchOrderSslCert(array $params)
 \OpenProvider::ssl()->searchProductSslCert(array $params)
 ```
-
-## Spam Experts 
+### Tags 
 ```php
-\OpenProvider::spamexperts()->createDomainSe(array $params)
-\OpenProvider::spamexperts()->deleteDomainSe(array $params)
-\OpenProvider::spamexperts()->generateSeLoginUrl(array $params)
-\OpenProvider::spamexperts()->modifyDomainSe(array $params)
-\OpenProvider::spamexperts()->retrieveDomainSe(array $params)
+\OpenProvider::tags()->createTag(array $params)
+\OpenProvider::tags()->deleteTag(array $params)
+\OpenProvider::tags()->searchTagRequest(array $params)
 ```
+### Tests
+```sh
+phpunit
+```
+- - - 
