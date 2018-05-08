@@ -14,8 +14,33 @@ class Client
     /**
      * @var array
      */
-    protected $options = [
-        'base_url' => 'https://api.openprovider.eu'
+    protected $endpoints = [
+        'live' => 'https://api.openprovider.eu',
+        'cte' => 'https://api.cte.openprovider.eu'
+    ];
+
+    /**
+     * @var
+     */
+    protected $environment;
+
+    /**
+     * @var array
+     */
+    protected $classes = [
+        'customers' => 'Customers',
+        'domains' => 'Domains',
+        'emails' => 'Emails',
+        'emailstemplates' => 'EmailsTemplates',
+        'extensions' => 'Extensions',
+        'financials' => 'Financials',
+        'licenses' => 'Licenses',
+        'nameservers' => 'NameServers',
+        'nameserversgroups' => 'NameServersGroups',
+        'resellers' => 'Resellers',
+        'spamexperts' => 'SpamExperts',
+        'ssl' => 'Ssl',
+        'tags' => 'Tags',
     ];
 
     /**
@@ -38,52 +63,37 @@ class Client
      */
     public function api($name)
     {
-        switch ($name) {
-            case 'customers':
-                $api = new \nickurt\OpenProvider\Api\Customers($this);
-                break;
-            case 'domains':
-                $api = new \nickurt\OpenProvider\Api\Domains($this);
-                break;
-            case 'emails':
-                $api = new \nickurt\OpenProvider\Api\Emails($this);
-                break;
-            case 'emailstemplates':
-                $api = new \nickurt\OpenProvider\Api\EmailsTemplates($this);
-                break;
-            case 'extensions':
-                $api = new \nickurt\OpenProvider\Api\Extensions($this);
-                break;
-            case 'financials':
-                $api = new \nickurt\OpenProvider\Api\Financials($this);
-                break;
-            case 'licenses':
-                $api = new \nickurt\OpenProvider\Api\Licenses($this);
-                break;
-            case 'nameservers':
-                $api = new \nickurt\OpenProvider\Api\NameServers($this);
-                break;
-            case 'nameserversgroups':
-                $api = new \nickurt\OpenProvider\Api\NameServersGroups($this);
-                break;
-            case 'resellers':
-                $api = new \nickurt\OpenProvider\Api\Resellers($this);
-                break;
-            case 'spamexperts':
-                $api = new \nickurt\OpenProvider\Api\SpamExperts($this);
-                break;
-            case 'ssl':
-                $api = new \nickurt\OpenProvider\Api\Ssl($this);
-                break;
-            case 'tags':
-                $api = new \nickurt\OpenProvider\Api\Tags($this);
-                break;
-            default:
-                throw new \InvalidArgumentException(sprintf('Undefined method called:"%s"', $name));
-                break;
+        if(!isset($this->classes[$name])) {
+            throw new \InvalidArgumentException(sprintf('Undefined method called:"%s"', $name));
         }
 
-        return $api;
+        $class = '\\nickurt\\OpenProvider\\Api\\' . $this->classes[$name];
+
+        return new $class($this);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEnvironment()
+    {
+        return $this->environment;
+    }
+
+    /**
+     * @param $environment
+     */
+    public function setEnvironment($environment)
+    {
+        $this->environment = $environment;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEndpointUrl()
+    {
+        return $this->endpoints[($this->getEnvironment() == 'cte') ? 'cte' : 'live'];
     }
 
     /**
@@ -105,8 +115,14 @@ class Client
     {
         if (!isset($this->httpClient)) {
             $this->httpClient = new HttpClient();
-            $this->httpClient->setOptions($this->options);
+            $this->httpClient->setOptions([
+                'base_url' => $this->getEndpointUrl()
+            ]);
         }
+
+        $this->httpClient->setOptions([
+            'base_url' => $this->getEndpointUrl()
+        ]);
 
         return $this->httpClient;
     }

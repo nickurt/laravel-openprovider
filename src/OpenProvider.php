@@ -79,6 +79,7 @@ class OpenProvider
             $config['username'],
             $config['password']
         );
+        $this->client->setEnvironment(isset($config['cte']) ? 'cte' : 'live');
 
         return $this->client;
     }

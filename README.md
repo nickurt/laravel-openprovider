@@ -31,9 +31,8 @@ Copy the config files for the OpenProvider-plugin
 php artisan vendor:publish --provider="nickurt\OpenProvider\ServiceProvider" --tag="config"
 ```
 
-Add the openprovider credentials to your .env file
+Add the OpenProvider credentials to your .env file
 ```
-OPENPROVIDER_DEFAULT_HOST=https://api.openprovider.eu
 OPENPROVIDER_DEFAULT_USERNAME=
 OPENPROVIDER_DEFAULT_PASSWORD=
 ```
