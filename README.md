@@ -1,42 +1,54 @@
 ## Laravel OpenProvider
 [![GitHub release](https://img.shields.io/github/release/nickurt/laravel-openprovide.svg)](https://github.com/nickurt/laravel-openprovider/releases)
 [![GitHub license](https://img.shields.io/github/license/nickurt/laravel-openprovider.svg)](https://github.com/nickurt/laravel-openprovider)
-
 ### Table of contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tests](#tests)
-
 ### Installation
 Install this package with composer:
 ```
 composer require nickurt/laravel-openprovider:dev-master 
 ```
-
 Add the provider to config/app.php file
-
 ```php
 'nickurt\OpenProvider\ServiceProvider',
 ```
-
 and the facade in the file
-
 ```php
 'OpenProvider' => 'nickurt\OpenProvider\Facade',
 ```
-
 Copy the config files for the OpenProvider-plugin
-
 ```
 php artisan vendor:publish --provider="nickurt\OpenProvider\ServiceProvider" --tag="config"
 ```
-
 Add the OpenProvider credentials to your .env file
 ```
 OPENPROVIDER_DEFAULT_USERNAME=
 OPENPROVIDER_DEFAULT_PASSWORD=
 ```
 ## Usage
+#### Dependency injection [e.g. by using multiple connections]
+```php
+// Route
+Route::get('/openprovider/{openProvider}/customers', ['as' => 'openprovider/customers', 'uses' => 'CustomersController@getIndex']);
+
+Route::bind('openProvider', function ($value, $route) {
+    app('OpenProvider')->connection($value);
+
+    return app('OpenProvider');
+});
+
+// CustomersController
+public function getIndex(OpenProvider $openProvider)
+{
+    $customers = $openProvider->customers()->searchCustomer([
+        'limit' => 20,
+    ]);
+
+    //
+}
+```
 ### Customers
 ```php
 \OpenProvider::customers()->createCustomer(array $params)
