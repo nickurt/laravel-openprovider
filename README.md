@@ -27,7 +27,7 @@ Add the OpenProvider credentials to your .env file
 OPENPROVIDER_DEFAULT_USERNAME=
 OPENPROVIDER_DEFAULT_PASSWORD=
 ```
-## Usage
+### Usage
 #### Dependency injection [e.g. by using multiple connections]
 ```php
 // Route
@@ -49,7 +49,7 @@ public function getIndex(OpenProvider $openProvider)
     //
 }
 ```
-### Customers
+#### Customers
 ```php
 \OpenProvider::customers()->createCustomer(array $params)
 \OpenProvider::customers()->deleteCustomer(array $params)
@@ -57,7 +57,7 @@ public function getIndex(OpenProvider $openProvider)
 \OpenProvider::customers()->retrieveCustomer(array $params)
 \OpenProvider::customers()->searchCustomer(array $params)
 ```
-### Domains
+#### Domains
 ```php
 \OpenProvider::domains()->approveTransferDomain(array $params)
 \OpenProvider::domains()->checkDomain(array $params)
@@ -78,31 +78,31 @@ public function getIndex(OpenProvider $openProvider)
 \OpenProvider::domains()->transferDomain(array $params)
 \OpenProvider::domains()->tryAgainDomain(array $params)
 ```
-### Emails
+#### Emails
 ```php
 \OpenProvider::emails()->restartCustomerEmailVerification(array $params)
 \OpenProvider::emails()->searchEmailVerificationDomain(array $params)
 \OpenProvider::emails()->startCustomerEmailVerification(array $params)
 ```
-### Emails Templates
+#### Emails Templates
 ```php
 \OpenProvider::emailstemplates()->createEmailTemplate(array $params)
 \OpenProvider::emailstemplates()->deleteEmailTemplate(array $params)
 \OpenProvider::emailstemplates()->modifyEmailTemplate(array $params)
 \OpenProvider::emailstemplates()->searchEmailTemplate(array $params)
 ```
-### Extensions
+#### Extensions
 ```php
 \OpenProvider::extensions()->searchExtension(array $params)
 \OpenProvider::extensions()->retrieveExtension(array $params)
 ```
-### Financials
+#### Financials
 ```php
 \OpenProvider::financials()->searchInvoiceReseller(array $params)
 \OpenProvider::financials()->searchPaymentReseller(array $params)
 \OpenProvider::financials()->searchTransactionReseller(array $params)
 ```
-### Licenses
+#### Licenses
 ```php
 \OpenProvider::licenses()->createLicense(array $params)
 \OpenProvider::licenses()->deleteLicense(array $params)
@@ -114,7 +114,7 @@ public function getIndex(OpenProvider $openProvider)
 \OpenProvider::licenses()->searchProductLicense(array $params)
 \OpenProvider::licenses()->upgradeLicense(array $params)
 ```
-### NameServers
+#### NameServers
 ```php
 \OpenProvider::nameservers()->createNs(array $params)
 \OpenProvider::nameservers()->createTemplateDns(array $params)
@@ -131,7 +131,7 @@ public function getIndex(OpenProvider $openProvider)
 \OpenProvider::nameservers()->searchTemplateDns(array $params)
 \OpenProvider::nameservers()->searchZoneDns(array $params)
 ```
-### NameServers Groups
+#### NameServers Groups
 ```php
 \OpenProvider::nameserversgroups()->createNsGroup(array $params)
 \OpenProvider::nameserversgroups()->deleteNsGroup(array $params)
@@ -139,7 +139,7 @@ public function getIndex(OpenProvider $openProvider)
 \OpenProvider::nameserversgroups()->retrieveNsGroup(array $params)
 \OpenProvider::nameserversgroups()->searchNsGroup(array $params)
 ```
-### Resellers
+#### Resellers
 ```php
 \OpenProvider::resellers()->createContactReseller(array $params)
 \OpenProvider::resellers()->deleteContactReseller(array $params)
@@ -151,7 +151,7 @@ public function getIndex(OpenProvider $openProvider)
 \OpenProvider::resellers()->retrieveStatisticsReseller()
 \OpenProvider::resellers()->searchContactReseller(array $params)
 ```
-### Spam Experts 
+#### Spam Experts 
 ```php
 \OpenProvider::spamexperts()->createDomainSe(array $params)
 \OpenProvider::spamexperts()->deleteDomainSe(array $params)
@@ -159,7 +159,7 @@ public function getIndex(OpenProvider $openProvider)
 \OpenProvider::spamexperts()->modifyDomainSe(array $params)
 \OpenProvider::spamexperts()->retrieveDomainSe(array $params)
 ```
-### SSL
+#### SSL
 ```php
 \OpenProvider::ssl()->cancelSslCert(array $params)
 \OpenProvider::ssl()->changeApproverEmailAddressSslCert(array $params)
@@ -177,7 +177,7 @@ public function getIndex(OpenProvider $openProvider)
 \OpenProvider::ssl()->searchOrderSslCert(array $params)
 \OpenProvider::ssl()->searchProductSslCert(array $params)
 ```
-### Tags 
+#### Tags 
 ```php
 \OpenProvider::tags()->createTag(array $params)
 \OpenProvider::tags()->deleteTag(array $params)
