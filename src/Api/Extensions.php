@@ -7,7 +7,7 @@ class Extensions extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveExtension($params)
     {
@@ -17,7 +17,7 @@ class Extensions extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchExtension($params = [])
     {

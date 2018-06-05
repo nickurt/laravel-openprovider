@@ -7,7 +7,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function approveTransferDomain($params)
     {
@@ -17,7 +17,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function checkDomain($params)
     {
@@ -27,7 +27,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function createDomain($params)
     {
@@ -37,7 +37,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function deleteDomain($params)
     {
@@ -47,7 +47,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function modifyDomain($params)
     {
@@ -57,7 +57,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function renewDomain($params)
     {
@@ -67,7 +67,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function requestAuthCodeDomain($params)
     {
@@ -77,7 +77,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function resetAuthCodeDomain($params)
     {
@@ -87,7 +87,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function restoreDomain($params)
     {
@@ -97,7 +97,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveAdditionalDataDomain($params)
     {
@@ -107,7 +107,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveCustomerAdditionalDataDomain($params)
     {
@@ -117,7 +117,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveDomain($params)
     {
@@ -127,7 +127,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrievePriceDomain($params)
     {
@@ -137,7 +137,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchDomain($params)
     {
@@ -147,7 +147,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function sendFoa1Domain($params)
     {
@@ -157,7 +157,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function tradeDomain($params)
     {
@@ -167,7 +167,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function transferDomain($params)
     {
@@ -177,7 +177,7 @@ class Domains extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function tryAgainDomain($params)
     {

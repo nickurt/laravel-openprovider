@@ -7,7 +7,7 @@ class Resellers extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function createContactReseller($params)
     {
@@ -17,7 +17,7 @@ class Resellers extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function deleteContactReseller($params)
     {
@@ -27,7 +27,7 @@ class Resellers extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function modifyContactReseller($params)
     {
@@ -37,7 +37,7 @@ class Resellers extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function modifyReseller($params)
     {
@@ -47,7 +47,7 @@ class Resellers extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveContactReseller($params)
     {
@@ -56,7 +56,7 @@ class Resellers extends AbstractApi
 
     /**
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveReseller()
     {
@@ -65,7 +65,7 @@ class Resellers extends AbstractApi
 
     /**
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveSettingsReseller()
     {
@@ -74,7 +74,7 @@ class Resellers extends AbstractApi
 
     /**
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveStatisticsReseller()
     {
@@ -84,7 +84,7 @@ class Resellers extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchContactReseller($params)
     {

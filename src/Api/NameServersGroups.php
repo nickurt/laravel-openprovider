@@ -7,7 +7,7 @@ class NameServersGroups extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function createNsGroup($params)
     {
@@ -17,7 +17,7 @@ class NameServersGroups extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function deleteNsGroup($params)
     {
@@ -27,7 +27,7 @@ class NameServersGroups extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function modifyNsGroup($params)
     {
@@ -37,7 +37,7 @@ class NameServersGroups extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveNsGroup($params)
     {
@@ -47,7 +47,7 @@ class NameServersGroups extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchNsGroup($params = [])
     {

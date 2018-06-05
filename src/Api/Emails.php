@@ -7,7 +7,7 @@ class Emails extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function restartCustomerEmailVerification($params)
     {
@@ -17,7 +17,7 @@ class Emails extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchEmailVerificationDomain($params)
     {
@@ -27,7 +27,7 @@ class Emails extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function startCustomerEmailVerification($params)
     {

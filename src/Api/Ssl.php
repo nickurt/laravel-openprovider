@@ -7,7 +7,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function cancelSslCert($params)
     {
@@ -17,7 +17,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function changeApproverEmailAddressSslCert($params)
     {
@@ -27,7 +27,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function createSslCert($params)
     {
@@ -37,7 +37,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function decodeCsrSslCert($params)
     {
@@ -47,7 +47,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function generateCsrSslCert($params)
     {
@@ -57,7 +57,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function generateOtpTokenSslCert($params)
     {
@@ -67,7 +67,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function modifySslCert($params)
     {
@@ -77,7 +77,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function reissueSslCert($params)
     {
@@ -87,7 +87,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function renewSslCert($params)
     {
@@ -97,7 +97,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function resendApproverEmailSslCert($params)
     {
@@ -107,7 +107,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveApproverEmailListSslCert($params)
     {
@@ -117,7 +117,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveOrderSslCert($params)
     {
@@ -127,7 +127,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveProductSslCert($params)
     {
@@ -137,7 +137,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchOrderSslCert($params)
     {
@@ -147,7 +147,7 @@ class Ssl extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchProductSslCert($params = [])
     {

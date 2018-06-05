@@ -7,7 +7,7 @@ class Financials extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchInvoiceReseller($params = [])
     {
@@ -17,7 +17,7 @@ class Financials extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchPaymentReseller($params)
     {
@@ -27,7 +27,7 @@ class Financials extends AbstractApi
     /**
      * @param array $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchTransactionReseller($params = [])
     {

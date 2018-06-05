@@ -7,7 +7,7 @@ class EmailsTemplates extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function createEmailTemplate($params)
     {
@@ -17,7 +17,7 @@ class EmailsTemplates extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function deleteEmailTemplate($params)
     {
@@ -27,7 +27,7 @@ class EmailsTemplates extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function modifyEmailTemplate($params)
     {
@@ -37,7 +37,7 @@ class EmailsTemplates extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function searchEmailTemplate($params)
     {

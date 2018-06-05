@@ -7,7 +7,7 @@ class SpamExperts extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function createDomainSe($params)
     {
@@ -17,7 +17,7 @@ class SpamExperts extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function deleteDomainSe($params)
     {
@@ -27,7 +27,7 @@ class SpamExperts extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function generateSeLoginUrl($params)
     {
@@ -37,7 +37,7 @@ class SpamExperts extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function modifyDomainSe($params)
     {
@@ -47,7 +47,7 @@ class SpamExperts extends AbstractApi
     /**
      * @param $params
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Http\Client\Exception
      */
     public function retrieveDomainSe($params)
     {
