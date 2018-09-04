@@ -8,7 +8,7 @@
 ### Installation
 Install this package with composer:
 ```
-composer require nickurt/laravel-openprovider:dev-master 
+composer require nickurt/laravel-openprovider
 ```
 Add the provider to config/app.php file
 ```php
