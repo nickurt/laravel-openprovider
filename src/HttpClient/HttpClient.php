@@ -88,4 +88,12 @@ class HttpClient implements HttpClientInterface
     {
         $this->headers = array_merge($this->headers, $headers);
     }
+
+    /**
+     * @param $client
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
+    }
 }
