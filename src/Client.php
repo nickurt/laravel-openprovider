@@ -4,29 +4,8 @@ namespace nickurt\OpenProvider;
 
 use nickurt\OpenProvider\HttpClient\HttpClient;
 
-/**
- * @method static \nickurt\OpenProvider\Api\Customers customers()
- */
 class Client
 {
-    /**
-     * @var
-     */
-    protected $httpClient;
-
-    /**
-     * @var array
-     */
-    protected $endpoints = [
-        'live' => 'https://api.openprovider.eu',
-        'cte' => 'https://api.cte.openprovider.eu'
-    ];
-
-    /**
-     * @var
-     */
-    protected $environment;
-
     /**
      * @var array
      */
@@ -45,6 +24,24 @@ class Client
         'ssl' => 'Ssl',
         'tags' => 'Tags',
     ];
+
+    /**
+     * @var array
+     */
+    protected $endpoints = [
+        'live' => 'https://api.openprovider.eu',
+        'cte' => 'https://api.cte.openprovider.eu'
+    ];
+
+    /**
+     * @var
+     */
+    protected $environment;
+
+    /**
+     * @var
+     */
+    protected $httpClient;
 
     /**
      * @param $method
@@ -66,37 +63,13 @@ class Client
      */
     public function api($name)
     {
-        if(!isset($this->classes[$name])) {
+        if (!isset($this->classes[$name])) {
             throw new \InvalidArgumentException(sprintf('Undefined method called:"%s"', $name));
         }
 
         $class = '\\nickurt\\OpenProvider\\Api\\' . $this->classes[$name];
 
         return new $class($this);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEnvironment()
-    {
-        return $this->environment;
-    }
-
-    /**
-     * @param $environment
-     */
-    public function setEnvironment($environment)
-    {
-        $this->environment = $environment;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEndpointUrl()
-    {
-        return $this->endpoints[($this->getEnvironment() == 'cte') ? 'cte' : 'live'];
     }
 
     /**
@@ -128,5 +101,29 @@ class Client
         ]);
 
         return $this->httpClient;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEndpointUrl()
+    {
+        return $this->endpoints[($this->getEnvironment() == 'cte') ? 'cte' : 'live'];
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEnvironment()
+    {
+        return $this->environment;
+    }
+
+    /**
+     * @param $environment
+     */
+    public function setEnvironment($environment)
+    {
+        $this->environment = $environment;
     }
 }
