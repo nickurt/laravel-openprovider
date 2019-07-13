@@ -9,9 +9,9 @@ class Licenses extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function createLicense($params)
+    public function createPleskLicense($params)
     {
-        return $this->post(['createLicenseRequest' => $params]);
+        return $this->post(['createPleskLicenseRequest' => $params]);
     }
 
     /**
@@ -19,9 +19,9 @@ class Licenses extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function deleteLicense($params)
+    public function createVirtuozzoLicense($params)
     {
-        return $this->post(['deleteLicenseRequest' => $params]);
+        return $this->post(['createVirtuozzoLicenseRequest' => $params]);
     }
 
     /**
@@ -29,9 +29,9 @@ class Licenses extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function editLicense($params)
+    public function deletePleskLicense($params)
     {
-        return $this->post(['editLicenseRequest' => $params]);
+        return $this->post(['deletePleskLicenseRequest' => $params]);
     }
 
     /**
@@ -39,9 +39,9 @@ class Licenses extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function retrieveKeyLicense($params)
+    public function deleteVirtuozzoLicense($params)
     {
-        return $this->post(['retrieveKeyLicenseRequest' => $params]);
+        return $this->post(['deleteVirtuozzoLicenseRequest' => $params]);
     }
 
     /**
@@ -49,9 +49,9 @@ class Licenses extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function retrieveLicense($params)
+    public function modifyPleskLicense($params)
     {
-        return $this->post(['retrieveLicenseRequest' => $params]);
+        return $this->post(['modifyPleskLicenseRequest' => $params]);
     }
 
     /**
@@ -59,9 +59,9 @@ class Licenses extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function retrieveProductLicense($params)
+    public function modifyVirtuozzoLicense($params)
     {
-        return $this->post(['retrieveProductLicenseRequest' => $params]);
+        return $this->post(['modifyVirtuozzoLicenseRequest' => $params]);
     }
 
     /**
@@ -69,9 +69,9 @@ class Licenses extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function searchLicense($params)
+    public function resetLicenseHWID($params)
     {
-        return $this->post(['searchLicenseRequest' => $params]);
+        return $this->post(['resetLicenseHWID' => $params]);
     }
 
     /**
@@ -79,9 +79,9 @@ class Licenses extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function searchProductLicense($params = [])
+    public function retrieveKeyPleskLicense($params)
     {
-        return $this->post(['searchProductLicenseRequest' => $params]);
+        return $this->post(['retrieveKeyPleskLicenseRequest' => $params]);
     }
 
     /**
@@ -89,8 +89,68 @@ class Licenses extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function upgradeLicense($params)
+    public function retrieveKeyVirtuozzoLicense($params)
     {
-        return $this->post(['upgradeLicenseRequest' => $params]);
+        return $this->post(['retrieveKeyVirtuozzoLicenseRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function retrievePleskLicense($params)
+    {
+        return $this->post(['retrievePleskLicenseRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function retrieveVirtuozzoLicense($params)
+    {
+        return $this->post(['retrieveVirtuozzoLicenseRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function searchPleskAndVirtuozzoItem($params)
+    {
+        return $this->post(['searchPleskAndVirtuozzoItemRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function searchPleskAndVirtuozzoLicense($params)
+    {
+        return $this->post(['searchPleskAndVirtuozzoLicenseRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function searchPleskLicense($params)
+    {
+        return $this->post(['searchPleskLicenseRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function searchVirtuozzoLicense($params)
+    {
+        return $this->post(['searchVirtuozzoLicenseRequest' => $params]);
     }
 }

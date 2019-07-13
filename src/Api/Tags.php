@@ -29,7 +29,7 @@ class Tags extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function searchTagRequest($params)
+    public function searchTag($params)
     {
         return $this->post(['searchTagRequest' => $params]);
     }

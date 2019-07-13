@@ -143,4 +143,14 @@ class NameServers extends AbstractApi
     {
         return $this->post(['searchZoneDnsRequest' => $params]);
     }
+
+    /**
+     * @param $params
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function searchZoneRecordDns($params)
+    {
+        return $this->post(['searchZoneRecordDnsRequest' => $params]);
+    }
 }

@@ -4,6 +4,9 @@ namespace nickurt\OpenProvider;
 
 use nickurt\OpenProvider\HttpClient\HttpClient;
 
+/**
+ * @method static \nickurt\OpenProvider\Api\Customers customers()
+ */
 class Client
 {
     /**

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><openXML><reply><code>0</code><desc /><data><publicKey><bits>2048</bits><key>-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFaAOCAQ8AMIIBCgKCAQEAoR19m63k4SZ0p7UL92WJ
+yAtxSByv4PKNPLYEiR0zJPbbkHVC73VeN/uOravnCCPzQJ1JFkH466zKH9EkcQb7
+bPdQk9tkdC9JNApJYIBCZe0MQHybtqmzKTE1P9c0Mvb6IHJYeUWUSjWNaUwta3/H
+jIv6ZQhYqEt4t4c3kaVxW4qg2Y80dZheaP/8YE639+Li+Gq98/K7gDuMVPMFpOEW
+fEP5z8sR8qAr8gY705opP6ies8qsYIRNmmZdjF96Rhm5qCaGA8Av07+JKyX6WdE6
+yCcXNwcJ7++v5C7T8hyqWYlVrAJFgaAOc87D40e7Mcp/u5Obn4HmR2EeRQCBdDec
+3QIDAQAB
+-----END PUBLIC KEY-----</key></publicKey><subject><commonName>www.openprovider.nl</commonName><organization>Openprovider (Hosting Concepts B.V.)</organization><unit>ICT</unit><locality>Rotterdam</locality><state>Zuid-Holland</state><country>NL</country><email>domreg@openprovider.nl</email></subject><subjectAlternativeName /><domainNamesCount>1</domainNamesCount></data></reply></openXML>

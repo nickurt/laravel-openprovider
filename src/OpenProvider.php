@@ -4,19 +4,13 @@ namespace nickurt\OpenProvider;
 
 class OpenProvider
 {
-    /**
-     * @var
-     */
+    /** @var \Illuminate\Foundation\Application */
     protected $app;
 
-    /**
-     * @var array
-     */
+    /** @var array */
     protected $connections = [];
 
-    /**
-     * @var
-     */
+    /** @var \nickurt\OpenProvider\Client */
     protected $client;
 
     /**
@@ -29,8 +23,8 @@ class OpenProvider
     }
 
     /**
-     * @param $method
-     * @param $args
+     * @param string $method
+     * @param array $args
      * @return mixed
      */
     public function __call($method, $args)
@@ -39,8 +33,8 @@ class OpenProvider
     }
 
     /**
-     * @param null $name
-     * @return Api\Client
+     * @param null|string $name
+     * @return \nickurt\OpenProvider\Client
      */
     public function connection($name = null)
     {
@@ -50,7 +44,7 @@ class OpenProvider
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getDefaultConnection()
     {
@@ -58,8 +52,8 @@ class OpenProvider
     }
 
     /**
-     * @param $name
-     * @return Api\Client
+     * @param string $name
+     * @return \nickurt\OpenProvider\Client
      */
     protected function get($name)
     {
@@ -67,8 +61,8 @@ class OpenProvider
     }
 
     /**
-     * @param $name
-     * @return Client
+     * @param string $name
+     * @return \nickurt\OpenProvider\Client
      */
     protected function resolve($name)
     {
@@ -85,8 +79,8 @@ class OpenProvider
     }
 
     /**
-     * @param $name
-     * @return mixed
+     * @param string $name
+     * @return array
      */
     protected function getConfig($name)
     {

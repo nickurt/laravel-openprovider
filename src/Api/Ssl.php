@@ -139,6 +139,16 @@ class Ssl extends AbstractApi
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
+    public function retrieveReissueApproverEmailListSslCert($params)
+    {
+        return $this->post(['retrieveReissueApproverEmailListSslCertRequest' => $params]);
+    }
+
+    /**
+     * @param $params
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function searchOrderSslCert($params)
     {
         return $this->post(['searchOrderSslCertRequest' => $params]);
