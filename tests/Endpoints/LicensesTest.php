@@ -27,7 +27,7 @@ class LicensesTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '236278']]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '236278']]], $license);
     }
 
     /** @test */
@@ -47,7 +47,7 @@ class LicensesTest extends BaseEndpointTest
             'restrictIPBinding' => '1'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '236278']]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '236278']]], $license);
     }
 
     /** @test */
@@ -59,7 +59,7 @@ class LicensesTest extends BaseEndpointTest
             'keyId' => '1446',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $license);
     }
 
     /** @test */
@@ -71,7 +71,7 @@ class LicensesTest extends BaseEndpointTest
             'keyId' => '74351955'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $license);
     }
 
     /** @test */
@@ -85,7 +85,7 @@ class LicensesTest extends BaseEndpointTest
             'comment' => 'Old server name: APOLLO'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $license);
     }
 
     /** @test */
@@ -99,7 +99,7 @@ class LicensesTest extends BaseEndpointTest
             'comment' => 'Old server name: APOLLO'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $license);
     }
 
     /** @test */
@@ -112,7 +112,7 @@ class LicensesTest extends BaseEndpointTest
             'keyId' => '74351940'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $license);
     }
 
     /** @test */
@@ -124,7 +124,7 @@ class LicensesTest extends BaseEndpointTest
             'id' => 1446
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cGxlc2stdW5pZmllZDprZXkgeG1sbnM6cGxlc2stdW5pZmllZD0iaHR...']], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cGxlc2stdW5pZmllZDprZXkgeG1sbnM6cGxlc2stdW5pZmllZD0iaHR...']], $license);
     }
 
     /** @test */
@@ -136,7 +136,7 @@ class LicensesTest extends BaseEndpointTest
             'keyId' => 74351955
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cGxlc2stdW5pZmllZDprZXkgeG1sbnM6cGxlc2stdW5pZmllZD0iaHR...']], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cGxlc2stdW5pZmllZDprZXkgeG1sbnM6cGxlc2stdW5pZmllZD0iaHR...']], $license);
     }
 
     /** @test */
@@ -148,7 +148,7 @@ class LicensesTest extends BaseEndpointTest
             'keyId' => '04879719',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['title' => 'test', 'comment' => 'comment', 'product' => 'plesk', 'contract' => '2014', 'keyId' => '4867003', 'parentKeyId' => [], 'keyNumber' => 'PLSK.04867003', 'billingType' => 'lease', 'period' => '1', 'status' => 'DEL', 'orderDate' => '2018-08-28 07:18:54', 'expirationDate' => '0000-00-00 00:00:00', 'items' => ['array' => ['item' => 'PLESK-12-VPS-WEB-ADMIN-1M']], 'skuValues' => ['PLSKVPS-ADM-M' => '1'], 'activationCode' => 'A00B00-******-4MDN86-******-DVE103', 'ipAddressBinding' => '127.0.0.33', 'key' => ['product' => 'plesk', 'title' => 'Plesk for VPS Web Admin Edition', 'item' => 'PLESK-12-VPS-WEB-ADMIN-1M', 'group' => ['product' => 'plesk', 'name' => 'plesk-12-onyx-keys', 'description' => 'Plesk 12/Onyx keys', 'itemsType' => 'key'], 'subgroup' => ['id' => [], 'title' => []], 'compatibility' => ['vps' => '1', 'standalone' => '0'], 'skuValues' => ['PLSKVPS-ADM-M' => '1']], 'features' => [], 'extensions' => []]]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['title' => 'test', 'comment' => 'comment', 'product' => 'plesk', 'contract' => '2014', 'keyId' => '4867003', 'parentKeyId' => [], 'keyNumber' => 'PLSK.04867003', 'billingType' => 'lease', 'period' => '1', 'status' => 'DEL', 'orderDate' => '2018-08-28 07:18:54', 'expirationDate' => '0000-00-00 00:00:00', 'items' => ['array' => ['item' => 'PLESK-12-VPS-WEB-ADMIN-1M']], 'skuValues' => ['PLSKVPS-ADM-M' => '1'], 'activationCode' => 'A00B00-******-4MDN86-******-DVE103', 'ipAddressBinding' => '127.0.0.33', 'key' => ['product' => 'plesk', 'title' => 'Plesk for VPS Web Admin Edition', 'item' => 'PLESK-12-VPS-WEB-ADMIN-1M', 'group' => ['product' => 'plesk', 'name' => 'plesk-12-onyx-keys', 'description' => 'Plesk 12/Onyx keys', 'itemsType' => 'key'], 'subgroup' => ['id' => [], 'title' => []], 'compatibility' => ['vps' => '1', 'standalone' => '0'], 'skuValues' => ['PLSKVPS-ADM-M' => '1']], 'features' => [], 'extensions' => []]]], $license);
     }
 
     /** @test */
@@ -160,7 +160,7 @@ class LicensesTest extends BaseEndpointTest
             'keyId' => '74351955',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['title' => [], 'comment' => [], 'product' => 'virtuozzo', 'contract' => '2014', 'keyId' => '74351955', 'parentKeyId' => [], 'keyNumber' => 'VZ.74351955', 'billingType' => 'lease', 'period' => '1', 'status' => 'ACT', 'orderDate' => '2018-09-13 10:06:46', 'expirationDate' => '2018-10-12 18:00:00', 'items' => ['array' => ['item' => 'VIRTUOZZO-7-LOW-DENSITY-2CPU-1M']], 'skuValues' => ['VZ-LD-2-M' => '1'], 'activationCode' => 'A40X00-******-E0MJ35-******-M56Z55', 'ipAddressBinding' => [], 'key' => ['product' => 'virtuozzo', 'title' => 'Virtuozzo 7.x Low Density, Up to 2 CPU Sockets', 'item' => 'VIRTUOZZO-7-LOW-DENSITY-2CPU-1M', 'group' => ['product' => 'virtuozzo', 'name' => 'virtuozzo-7x-keys', 'description' => 'Virtuozzo 7.x keys', 'itemsType' => 'key'], 'subgroup' => ['id' => [], 'title' => []], 'compatibility' => ['vps' => '1', 'standalone' => '1'], 'skuValues' => ['VZ-LD-2-M' => '1']], 'features' => [], 'extensions' => []]]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['title' => [], 'comment' => [], 'product' => 'virtuozzo', 'contract' => '2014', 'keyId' => '74351955', 'parentKeyId' => [], 'keyNumber' => 'VZ.74351955', 'billingType' => 'lease', 'period' => '1', 'status' => 'ACT', 'orderDate' => '2018-09-13 10:06:46', 'expirationDate' => '2018-10-12 18:00:00', 'items' => ['array' => ['item' => 'VIRTUOZZO-7-LOW-DENSITY-2CPU-1M']], 'skuValues' => ['VZ-LD-2-M' => '1'], 'activationCode' => 'A40X00-******-E0MJ35-******-M56Z55', 'ipAddressBinding' => [], 'key' => ['product' => 'virtuozzo', 'title' => 'Virtuozzo 7.x Low Density, Up to 2 CPU Sockets', 'item' => 'VIRTUOZZO-7-LOW-DENSITY-2CPU-1M', 'group' => ['product' => 'virtuozzo', 'name' => 'virtuozzo-7x-keys', 'description' => 'Virtuozzo 7.x keys', 'itemsType' => 'key'], 'subgroup' => ['id' => [], 'title' => []], 'compatibility' => ['vps' => '1', 'standalone' => '1'], 'skuValues' => ['VZ-LD-2-M' => '1']], 'features' => [], 'extensions' => []]]], $license);
     }
 
     /** @test */
@@ -173,7 +173,7 @@ class LicensesTest extends BaseEndpointTest
             'limit' => 1
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['product' => 'plesk', 'title' => '1 Language Pack for Plesk 12/Onyx', 'item' => 'FT-PLESK-1-LANGUAGE-PACK-1M', 'group' => ['product' => 'plesk', 'name' => 'plesk-genuine-ext-multilang-support-features', 'description' => 'Genuine extensions - Multilanguage support', 'itemsType' => 'feature'], 'subgroup' => ['id' => [], 'title' => []], 'compatibility' => ['vps' => '0', 'standalone' => '1'], 'skuValues' => ['PLSK-ADD-LP-M' => '1']]]], 'total' => '122']]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['product' => 'plesk', 'title' => '1 Language Pack for Plesk 12/Onyx', 'item' => 'FT-PLESK-1-LANGUAGE-PACK-1M', 'group' => ['product' => 'plesk', 'name' => 'plesk-genuine-ext-multilang-support-features', 'description' => 'Genuine extensions - Multilanguage support', 'itemsType' => 'feature'], 'subgroup' => ['id' => [], 'title' => []], 'compatibility' => ['vps' => '0', 'standalone' => '1'], 'skuValues' => ['PLSK-ADD-LP-M' => '1']]]], 'total' => '122']]], $license);
     }
 
     /** @test */
@@ -186,7 +186,7 @@ class LicensesTest extends BaseEndpointTest
             'offset' => 0
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['title' => [], 'comment' => [], 'product' => 'virtuozzo', 'contract' => '2014', 'keyId' => '74350716', 'parentKeyId' => [], 'keyNumber' => 'PCSS.74350716', 'billingType' => 'lease', 'period' => '1', 'status' => 'DEL', 'orderDate' => '2018-08-31 10:43:01', 'expirationDate' => '0000-00-00 00:00:00', 'items' => ['array' => ['item' => [0 => 'Virtuozzo storage', 1 => 'Monthly SUS for Virtuozzo containers/with VMs']]], 'skuValues' => ['PCSS-100GB-M' => '1'], 'activationCode' => 'A40E00-******-ZDA035-******-A5X116', 'priceVersion' => '1']]], 'total' => '250']]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['title' => [], 'comment' => [], 'product' => 'virtuozzo', 'contract' => '2014', 'keyId' => '74350716', 'parentKeyId' => [], 'keyNumber' => 'PCSS.74350716', 'billingType' => 'lease', 'period' => '1', 'status' => 'DEL', 'orderDate' => '2018-08-31 10:43:01', 'expirationDate' => '0000-00-00 00:00:00', 'items' => ['array' => ['item' => [0 => 'Virtuozzo storage', 1 => 'Monthly SUS for Virtuozzo containers/with VMs']]], 'skuValues' => ['PCSS-100GB-M' => '1'], 'activationCode' => 'A40E00-******-ZDA035-******-A5X116', 'priceVersion' => '1']]], 'total' => '250']]], $license);
     }
 
     /** @test */
@@ -198,7 +198,7 @@ class LicensesTest extends BaseEndpointTest
             'keyNumber' => 'PLSK.04879719'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['title' => 'Test', 'comment' => [], 'product' => 'plesk', 'contract' => '2014', 'keyId' => '4879719', 'parentKeyId' => [], 'keyNumber' => 'PLSK.04879719', 'billingType' => 'lease', 'period' => '1', 'status' => 'ACT', 'orderDate' => '2018-09-05 11:07:35', 'expirationDate' => '2018-10-04 18:00:00', 'items' => ['array' => ['item' => 'PLESK-12-VPS-WEB-ADMIN-1M']], 'skuValues' => ['PLSKVPS-ADM-M' => '1'], 'activationCode' => 'A00F00-******-YHDH87-******-9VBS19', 'ipAddressBinding' => '8.8.8.7']]], 'total' => '1']]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['title' => 'Test', 'comment' => [], 'product' => 'plesk', 'contract' => '2014', 'keyId' => '4879719', 'parentKeyId' => [], 'keyNumber' => 'PLSK.04879719', 'billingType' => 'lease', 'period' => '1', 'status' => 'ACT', 'orderDate' => '2018-09-05 11:07:35', 'expirationDate' => '2018-10-04 18:00:00', 'items' => ['array' => ['item' => 'PLESK-12-VPS-WEB-ADMIN-1M']], 'skuValues' => ['PLSKVPS-ADM-M' => '1'], 'activationCode' => 'A00F00-******-YHDH87-******-9VBS19', 'ipAddressBinding' => '8.8.8.7']]], 'total' => '1']]], $license);
     }
 
     /** @test */
@@ -210,6 +210,6 @@ class LicensesTest extends BaseEndpointTest
             'keyId' => '74351955'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['title' => [], 'comment' => [], 'product' => 'virtuozzo', 'contract' => '2014', 'keyId' => '74351955', 'parentKeyId' => [], 'keyNumber' => 'VZ.74351955', 'billingType' => 'lease', 'period' => '1', 'status' => 'ACT', 'orderDate' => '2018-09-13 10:06:46', 'expirationDate' => '2018-10-12 18:00:00', 'items' => ['array' => ['item' => 'VIRTUOZZO-7-LOW-DENSITY-2CPU-1M']], 'skuValues' => ['VZ-LD-2-M' => '1'], 'activationCode' => 'A40X00-******-E0MJ35-******-M56Z55', 'ipAddressBinding' => []]]], 'total' => '1']]], $license);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['title' => [], 'comment' => [], 'product' => 'virtuozzo', 'contract' => '2014', 'keyId' => '74351955', 'parentKeyId' => [], 'keyNumber' => 'VZ.74351955', 'billingType' => 'lease', 'period' => '1', 'status' => 'ACT', 'orderDate' => '2018-09-13 10:06:46', 'expirationDate' => '2018-10-12 18:00:00', 'items' => ['array' => ['item' => 'VIRTUOZZO-7-LOW-DENSITY-2CPU-1M']], 'skuValues' => ['VZ-LD-2-M' => '1'], 'activationCode' => 'A40X00-******-E0MJ35-******-M56Z55', 'ipAddressBinding' => []]]], 'total' => '1']]], $license);
     }
 }

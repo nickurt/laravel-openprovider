@@ -26,7 +26,7 @@ class SpamExpertsTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '214', 'message' => 'WARNING: Unable to deliver mail through host mail.newfilter.nl:25WARNING: Unable to deliver mail through host fallback.newfilter.nl:100']]], $se);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '214', 'message' => 'WARNING: Unable to deliver mail through host mail.newfilter.nl:25WARNING: Unable to deliver mail through host fallback.newfilter.nl:100']]], $se);
     }
 
     /** @test */
@@ -39,7 +39,7 @@ class SpamExpertsTest extends BaseEndpointTest
             'bundle' => '0'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['message' => []]]], $se);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['message' => []]]], $se);
     }
 
     /** @test */
@@ -52,7 +52,7 @@ class SpamExpertsTest extends BaseEndpointTest
             'bundle' => '1',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['url' => 'http://spamexperts.openprovider.eu//?authticket=086ee798cfa3c6af0123553cfd4774757223fdfe']]], $se);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['url' => 'http://spamexperts.openprovider.eu//?authticket=086ee798cfa3c6af0123553cfd4774757223fdfe']]], $se);
     }
 
     /** @test */
@@ -77,7 +77,7 @@ class SpamExpertsTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $se);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $se);
     }
 
     /** @test */
@@ -91,6 +91,6 @@ class SpamExpertsTest extends BaseEndpointTest
             'withRecords' => 1,
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['resellerId' => '123456', 'isActive' => '1', 'withOutgoingFilter' => '0', 'domainName' => 'filter.nl', 'userEmail' => 'admin@filter.nl', 'userPassword' => 'qweasdzxc', 'smtpPassword' => [], 'products' => ['incoming' => '1', 'outgoing' => '0', 'archiving' => '1'], 'expirationDate' => '2017-09-01', 'records' => ['destinations' => ['array' => ['item' => ['hostname' => 'mbox001.filter.nl', 'port' => '25']]], 'aliases' => [], 'outgoingUserIps' => []]]]], $se);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['resellerId' => '123456', 'isActive' => '1', 'withOutgoingFilter' => '0', 'domainName' => 'filter.nl', 'userEmail' => 'admin@filter.nl', 'userPassword' => 'qweasdzxc', 'smtpPassword' => [], 'products' => ['incoming' => '1', 'outgoing' => '0', 'archiving' => '1'], 'expirationDate' => '2017-09-01', 'records' => ['destinations' => ['array' => ['item' => ['hostname' => 'mbox001.filter.nl', 'port' => '25']]], 'aliases' => [], 'outgoingUserIps' => []]]]], $se);
     }
 }

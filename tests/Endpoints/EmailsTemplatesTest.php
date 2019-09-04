@@ -47,7 +47,7 @@ class EmailsTemplatesTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '1404']]], $email);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '1404']]], $email);
     }
 
     /** @test */
@@ -59,7 +59,7 @@ class EmailsTemplatesTest extends BaseEndpointTest
             'id' => 1409,
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $email);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $email);
     }
 
     /** @test */
@@ -105,7 +105,7 @@ class EmailsTemplatesTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $email);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $email);
     }
 
     /** @test */
@@ -117,6 +117,6 @@ class EmailsTemplatesTest extends BaseEndpointTest
             'group' => 'ive',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['id' => '733', 'name' => 'Custom Template (en_GB)', 'group' => 'ive', 'isDefault' => [], 'isActive' => '1', 'tags' => [], 'fields' => ['array' => ['item' => [0 => ['name' => 'body', 'value' => 'Body of the email'], 1 => ['name' => 'reminderBody', 'value' => 'Body of reminder email'], 2 => ['name' => 'subject', 'value' => 'Request for e-mail address verification'], 3 => ['name' => 'reminderSubject', 'value' => '[REMINDER] Request for e-mail address verification'], 4 => ['name' => 'confirmUrl', 'value' => 'http://icann-verification.registrar.eu/?email=%%email%%&authCode=%%authCode%%'], 5 => ['name' => 'resellerName', 'value' => 'MyCompany'], 6 => ['name' => 'senderEmail', 'value' => 'support@mycompany.net']]]], 'locale' => ['array' => ['item' => 'en_GB']]]]], 'total' => '5']]], $email);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['id' => '733', 'name' => 'Custom Template (en_GB)', 'group' => 'ive', 'isDefault' => [], 'isActive' => '1', 'tags' => [], 'fields' => ['array' => ['item' => [0 => ['name' => 'body', 'value' => 'Body of the email'], 1 => ['name' => 'reminderBody', 'value' => 'Body of reminder email'], 2 => ['name' => 'subject', 'value' => 'Request for e-mail address verification'], 3 => ['name' => 'reminderSubject', 'value' => '[REMINDER] Request for e-mail address verification'], 4 => ['name' => 'confirmUrl', 'value' => 'http://icann-verification.registrar.eu/?email=%%email%%&authCode=%%authCode%%'], 5 => ['name' => 'resellerName', 'value' => 'MyCompany'], 6 => ['name' => 'senderEmail', 'value' => 'support@mycompany.net']]]], 'locale' => ['array' => ['item' => 'en_GB']]]]], 'total' => '5']]], $email);
     }
 }

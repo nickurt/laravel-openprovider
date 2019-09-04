@@ -17,7 +17,7 @@ class DomainsTest extends BaseEndpointTest
             'withAdditionalData' => 0
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => [0 => ['domain' => 'openprovider.nl', 'status' => 'active', 'reason' => 'Domain exists'], 1 => ['domain' => 'this-domain-is-free.biz', 'status' => 'free'], 2 => ['domain' => 'greece.guru', 'status' => 'active', 'reason' => 'Reserved Domain Name']]]]]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => [0 => ['domain' => 'openprovider.nl', 'status' => 'active', 'reason' => 'Domain exists'], 1 => ['domain' => 'this-domain-is-free.biz', 'status' => 'free'], 2 => ['domain' => 'greece.guru', 'status' => 'active', 'reason' => 'Reserved Domain Name']]]]]], $domain);
     }
 
     /** @test */
@@ -39,7 +39,7 @@ class DomainsTest extends BaseEndpointTest
             'nsTemplateName' => 'Shared hosting server Apollo',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['status' => 'ACT', 'activationDate' => '2011-04-22 14:14:32', 'expirationDate' => '2012-04-22 14:41:32', 'expirationDateOpenprovider' => '2012-04-22 14:41:32', 'authCode' => '123456']]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['status' => 'ACT', 'activationDate' => '2011-04-22 14:14:32', 'expirationDate' => '2012-04-22 14:41:32', 'expirationDateOpenprovider' => '2012-04-22 14:41:32', 'authCode' => '123456']]], $domain);
     }
 
     /** @test */
@@ -54,7 +54,7 @@ class DomainsTest extends BaseEndpointTest
             ]
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 
     /** @test */
@@ -88,7 +88,7 @@ class DomainsTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 
     /** @test */
@@ -104,7 +104,7 @@ class DomainsTest extends BaseEndpointTest
             'period' => 1
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 
     /** @test */
@@ -120,7 +120,7 @@ class DomainsTest extends BaseEndpointTest
             'authCodeType' => 'external',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 
     /** @test */
@@ -135,7 +135,7 @@ class DomainsTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 
     /** @test */
@@ -150,7 +150,7 @@ class DomainsTest extends BaseEndpointTest
             ]
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 
     /** @test */
@@ -164,7 +164,7 @@ class DomainsTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => ['name' => 'legalType', 'description' => 'Legal type', 'required' => '1', 'type' => 'select', 'options' => ['array' => ['item' => [0 => ['value' => 'ABO', 'description' => 'Aboriginal Peoples indigenous to Canada'], 1 => ['value' => 'ASS', 'description' => 'Canadian Unincorporated Association'], 2 => ['value' => 'TRS', 'description' => 'Trust established in Canada']]]]]]]]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => ['name' => 'legalType', 'description' => 'Legal type', 'required' => '1', 'type' => 'select', 'options' => ['array' => ['item' => [0 => ['value' => 'ABO', 'description' => 'Aboriginal Peoples indigenous to Canada'], 1 => ['value' => 'ASS', 'description' => 'Canadian Unincorporated Association'], 2 => ['value' => 'TRS', 'description' => 'Trust established in Canada']]]]]]]]], $domain);
     }
 
     /** @test */
@@ -178,7 +178,7 @@ class DomainsTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => ['name' => 'nexusCategory', 'description' => 'Nexus category', 'required' => '1', 'type' => 'select', 'options' => ['array' => ['item' => [0 => ['value' => 'C11', 'description' => 'Natural person who is a United States citizen'], 1 => ['value' => 'C12', 'description' => 'Natural person whois a permanent resident of the United States of America or any of its possessions or territories. A U.S. Organization incorporated within one of the fifty (50) U.S. States, the District of Columbia, or any of the U.S. Possessions or territories or organized or otherwise constituted under the laws of a state of the United States of America, the District of Columbia or any of its possessions or territories or a U.S. Federal, state, or local government entity or a political subdivision thereof.'], 2 => ['value' => 'C21', 'description' => 'C21 - U.S. Organization incorporated within one of the 50 states or a U.S. Territory. An entity or organization that has a bona fide presence in the Unite States of America or any of its possessions or territories.'], 3 => ['value' => 'C31', 'description' => 'Regularly engages in lawful activities (sales of goods or services or other business, commercial or non-commercial, including not-for-profit relations in the United States).'], 4 => ['value' => 'C32', 'description' => 'Entity has an office or other facility in the US.']]]]]]]]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => ['name' => 'nexusCategory', 'description' => 'Nexus category', 'required' => '1', 'type' => 'select', 'options' => ['array' => ['item' => [0 => ['value' => 'C11', 'description' => 'Natural person who is a United States citizen'], 1 => ['value' => 'C12', 'description' => 'Natural person whois a permanent resident of the United States of America or any of its possessions or territories. A U.S. Organization incorporated within one of the fifty (50) U.S. States, the District of Columbia, or any of the U.S. Possessions or territories or organized or otherwise constituted under the laws of a state of the United States of America, the District of Columbia or any of its possessions or territories or a U.S. Federal, state, or local government entity or a political subdivision thereof.'], 2 => ['value' => 'C21', 'description' => 'C21 - U.S. Organization incorporated within one of the 50 states or a U.S. Territory. An entity or organization that has a bona fide presence in the Unite States of America or any of its possessions or territories.'], 3 => ['value' => 'C31', 'description' => 'Regularly engages in lawful activities (sales of goods or services or other business, commercial or non-commercial, including not-for-profit relations in the United States).'], 4 => ['value' => 'C32', 'description' => 'Entity has an office or other facility in the US.']]]]]]]]], $domain);
     }
 
     /** @test */
@@ -199,7 +199,7 @@ class DomainsTest extends BaseEndpointTest
             ]
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['domain' => ['name' => 'abcdefg4', 'extension' => 'nl'], 'nameServers' => [], 'id' => '341105', 'isLockable' => '0', 'isLocked' => '0', 'comments' => [], 'orderDate' => '2010-03-15 16:50:19', 'activeDate' => [], 'expirationDate' => [], 'expirationDateOpenprovider' => [], 'status' => 'FAI', 'canRenew' => '0', 'autoRenew' => '0', 'ownerHandle' => 'OH002766-NL', 'adminHandle' => 'OH002766-NL', 'techHandle' => 'OH002766-NL', 'billingHandle' => 'SR003891-NL', 'nsGroup' => 'opdrs4', 'type' => 'NEW', 'authCode' => [], 'authorizationCodeRequired' => '0', 'tradeAllowed' => '1', 'restorePrice' => '70', 'useDomicile' => '0', 'ownerName' => ['initials' => 'N.', 'firstName' => 'Nigel', 'prefix' => [], 'lastName' => 'Jones'], 'ownerCompanyName' => []]]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['domain' => ['name' => 'abcdefg4', 'extension' => 'nl'], 'nameServers' => [], 'id' => '341105', 'isLockable' => '0', 'isLocked' => '0', 'comments' => [], 'orderDate' => '2010-03-15 16:50:19', 'activeDate' => [], 'expirationDate' => [], 'expirationDateOpenprovider' => [], 'status' => 'FAI', 'canRenew' => '0', 'autoRenew' => '0', 'ownerHandle' => 'OH002766-NL', 'adminHandle' => 'OH002766-NL', 'techHandle' => 'OH002766-NL', 'billingHandle' => 'SR003891-NL', 'nsGroup' => 'opdrs4', 'type' => 'NEW', 'authCode' => [], 'authorizationCodeRequired' => '0', 'tradeAllowed' => '1', 'restorePrice' => '70', 'useDomicile' => '0', 'ownerName' => ['initials' => 'N.', 'firstName' => 'Nigel', 'prefix' => [], 'lastName' => 'Jones'], 'ownerCompanyName' => []]]], $domain);
     }
 
     /** @test */
@@ -215,7 +215,7 @@ class DomainsTest extends BaseEndpointTest
             'operation' => 'create',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['price' => ['product' => ['price' => '100000.00', 'currency' => 'USD'], 'reseller' => ['price' => '93381.69', 'currency' => 'EUR']], 'isPremium' => '1']]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['price' => ['product' => ['price' => '100000.00', 'currency' => 'USD'], 'reseller' => ['price' => '93381.69', 'currency' => 'EUR']], 'isPremium' => '1']]], $domain);
     }
 
     /** @test */
@@ -232,7 +232,7 @@ class DomainsTest extends BaseEndpointTest
             'order' => 'desc'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => [0 => ['domain' => ['name' => 'test-free-registration', 'extension' => 'nl'], 'nameServers' => [], 'id' => '353146', 'isLockable' => '0', 'isLocked' => '0', 'comments' => [], 'orderDate' => '2010-04-20 16:16:26', 'activeDate' => '2010-04-20 16:16:29', 'expirationDate' => '2011-04-20 14:16:28', 'expirationDateOpenprovider' => '2011-04-20 14:16:28', 'status' => 'ACT', 'canRenew' => '0', 'autoRenew' => '1', 'ownerHandle' => 'NL000115-NL', 'adminHandle' => 'NL000115-NL', 'techHandle' => 'NL000115-NL', 'billingHandle' => 'SR003891-NL', 'nsGroup' => 'dns-openprovider', 'type' => 'NEW', 'authCode' => 'sad08dfdsf', 'authorizationCodeRequired' => '0', 'tradeAllowed' => '1', 'restorePrice' => '70', 'useDomicile' => '0', 'ownerName' => ['initials' => 'N', 'firstName' => 'Nigel', 'prefix' => [], 'lastName' => 'Jones'], 'ownerCompanyName' => 'Company Ltd'], 1 => ['domain' => ['name' => 'test-free-domain', 'extension' => 'nl'], 'nameServers' => [], 'id' => '353163', 'isLockable' => '0', 'isLocked' => '0', 'comments' => [], 'orderDate' => '2010-04-20 17:12:47', 'activeDate' => '2010-04-20 17:12:51', 'expirationDate' => '2011-04-20 15:12:50', 'expirationDateOpenprovider' => '2011-04-20 15:12:50', 'status' => 'ACT', 'canRenew' => '0', 'autoRenew' => '1', 'ownerHandle' => 'GB000002-GB', 'adminHandle' => 'GB000002-GB', 'techHandle' => 'GB000002-GB', 'billingHandle' => 'SR003891-NL', 'nsGroup' => 'dns-openprovider', 'type' => 'NEW', 'authCode' => 'sad08dfdsf', 'authorizationCodeRequired' => '0', 'tradeAllowed' => '1', 'restorePrice' => '70', 'useDomicile' => '0', 'ownerName' => ['initials' => 'UK', 'firstName' => 'Great', 'prefix' => [], 'lastName' => 'Britain'], 'ownerCompanyName' => []], 2 => ['domain' => ['name' => 'abcdefg', 'extension' => 'nl'], 'nameServers' => [], 'id' => '341105', 'isLockable' => '0', 'isLocked' => '0', 'comments' => [], 'orderDate' => '2010-03-15 16:50:19', 'activeDate' => [], 'expirationDate' => '2011-03-15 16:50:19', 'expirationDateOpenprovider' => [], 'status' => 'FAI', 'canRenew' => '0', 'autoRenew' => '0', 'ownerHandle' => 'OH002766-NL', 'adminHandle' => 'OH002766-NL', 'techHandle' => 'OH002766-NL', 'billingHandle' => 'SR003891-NL', 'nsGroup' => 'opdrs4', 'type' => 'NEW', 'authCode' => '88sdkjhf7', 'authorizationCodeRequired' => '0', 'tradeAllowed' => '1', 'restorePrice' => '70', 'useDomicile' => '0', 'ownerName' => ['initials' => 'I.', 'firstName' => 'Ibrahim', 'prefix' => [], 'lastName' => 'Smith'], 'ownerCompanyName' => []]]]], 'total' => '3']]], $domains);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => [0 => ['domain' => ['name' => 'test-free-registration', 'extension' => 'nl'], 'nameServers' => [], 'id' => '353146', 'isLockable' => '0', 'isLocked' => '0', 'comments' => [], 'orderDate' => '2010-04-20 16:16:26', 'activeDate' => '2010-04-20 16:16:29', 'expirationDate' => '2011-04-20 14:16:28', 'expirationDateOpenprovider' => '2011-04-20 14:16:28', 'status' => 'ACT', 'canRenew' => '0', 'autoRenew' => '1', 'ownerHandle' => 'NL000115-NL', 'adminHandle' => 'NL000115-NL', 'techHandle' => 'NL000115-NL', 'billingHandle' => 'SR003891-NL', 'nsGroup' => 'dns-openprovider', 'type' => 'NEW', 'authCode' => 'sad08dfdsf', 'authorizationCodeRequired' => '0', 'tradeAllowed' => '1', 'restorePrice' => '70', 'useDomicile' => '0', 'ownerName' => ['initials' => 'N', 'firstName' => 'Nigel', 'prefix' => [], 'lastName' => 'Jones'], 'ownerCompanyName' => 'Company Ltd'], 1 => ['domain' => ['name' => 'test-free-domain', 'extension' => 'nl'], 'nameServers' => [], 'id' => '353163', 'isLockable' => '0', 'isLocked' => '0', 'comments' => [], 'orderDate' => '2010-04-20 17:12:47', 'activeDate' => '2010-04-20 17:12:51', 'expirationDate' => '2011-04-20 15:12:50', 'expirationDateOpenprovider' => '2011-04-20 15:12:50', 'status' => 'ACT', 'canRenew' => '0', 'autoRenew' => '1', 'ownerHandle' => 'GB000002-GB', 'adminHandle' => 'GB000002-GB', 'techHandle' => 'GB000002-GB', 'billingHandle' => 'SR003891-NL', 'nsGroup' => 'dns-openprovider', 'type' => 'NEW', 'authCode' => 'sad08dfdsf', 'authorizationCodeRequired' => '0', 'tradeAllowed' => '1', 'restorePrice' => '70', 'useDomicile' => '0', 'ownerName' => ['initials' => 'UK', 'firstName' => 'Great', 'prefix' => [], 'lastName' => 'Britain'], 'ownerCompanyName' => []], 2 => ['domain' => ['name' => 'abcdefg', 'extension' => 'nl'], 'nameServers' => [], 'id' => '341105', 'isLockable' => '0', 'isLocked' => '0', 'comments' => [], 'orderDate' => '2010-03-15 16:50:19', 'activeDate' => [], 'expirationDate' => '2011-03-15 16:50:19', 'expirationDateOpenprovider' => [], 'status' => 'FAI', 'canRenew' => '0', 'autoRenew' => '0', 'ownerHandle' => 'OH002766-NL', 'adminHandle' => 'OH002766-NL', 'techHandle' => 'OH002766-NL', 'billingHandle' => 'SR003891-NL', 'nsGroup' => 'opdrs4', 'type' => 'NEW', 'authCode' => '88sdkjhf7', 'authorizationCodeRequired' => '0', 'tradeAllowed' => '1', 'restorePrice' => '70', 'useDomicile' => '0', 'ownerName' => ['initials' => 'I.', 'firstName' => 'Ibrahim', 'prefix' => [], 'lastName' => 'Smith'], 'ownerCompanyName' => []]]]], 'total' => '3']]], $domains);
     }
 
     /** @test */
@@ -247,7 +247,7 @@ class DomainsTest extends BaseEndpointTest
             ]
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 
     /** @test */
@@ -267,7 +267,7 @@ class DomainsTest extends BaseEndpointTest
             'nsGroup' => 'MyServer',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '364', 'desc' => 'Owner handle must differ from the current one.', 'data' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '364', 'desc' => 'Owner handle must differ from the current one.', 'data' => []]], $domain);
     }
 
     /** @test */
@@ -312,7 +312,7 @@ class DomainsTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 
     /** @test */
@@ -327,7 +327,7 @@ class DomainsTest extends BaseEndpointTest
             ]
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 
     /** @test */
@@ -343,6 +343,6 @@ class DomainsTest extends BaseEndpointTest
             'approve' => 1
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $domain);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $domain);
     }
 }

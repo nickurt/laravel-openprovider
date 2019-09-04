@@ -17,7 +17,7 @@ class NameServersGroupsTest extends BaseEndpointTest
             ]
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $group);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $group);
     }
 
     /** @test */
@@ -29,7 +29,7 @@ class NameServersGroupsTest extends BaseEndpointTest
             'nsGroup' => 'server-tux',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $group);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $group);
     }
 
     /** @test */
@@ -46,7 +46,7 @@ class NameServersGroupsTest extends BaseEndpointTest
             ]
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $group);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $group);
     }
 
     /** @test */
@@ -58,7 +58,7 @@ class NameServersGroupsTest extends BaseEndpointTest
             'nsGroup' => 'server-tux',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['nameServers' => ['array' => ['item' => [0 => ['name' => 'ns1.openprovider.nl', 'ip' => '89.255.7.30'], 1 => ['name' => 'ns2.openprovider.be', 'ip' => '89.255.6.30']]]], 'nsGroup' => 'server-tux', 'nsCount' => '3']]], $group);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['nameServers' => ['array' => ['item' => [0 => ['name' => 'ns1.openprovider.nl', 'ip' => '89.255.7.30'], 1 => ['name' => 'ns2.openprovider.be', 'ip' => '89.255.6.30']]]], 'nsGroup' => 'server-tux', 'nsCount' => '3']]], $group);
     }
 
     /** @test */
@@ -70,6 +70,6 @@ class NameServersGroupsTest extends BaseEndpointTest
             //
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['nameServers' => ['array' => ['item' => [0 => ['name' => 'ns1.openprovider.nl', 'ip' => '89.255.7.30'], 1 => ['name' => 'ns2.openprovider.be', 'ip' => '89.255.6.30'], 2 => ['name' => 'ns3.openprovider.eu', 'ip' => '80.95.170.252']]]], 'nsGroup' => 'server-tux', 'nsCount' => '3']]], 'total' => '1']]], $group);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['nameServers' => ['array' => ['item' => [0 => ['name' => 'ns1.openprovider.nl', 'ip' => '89.255.7.30'], 1 => ['name' => 'ns2.openprovider.be', 'ip' => '89.255.6.30'], 2 => ['name' => 'ns3.openprovider.eu', 'ip' => '80.95.170.252']]]], 'nsGroup' => 'server-tux', 'nsCount' => '3']]], 'total' => '1']]], $group);
     }
 }

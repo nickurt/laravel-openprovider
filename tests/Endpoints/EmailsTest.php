@@ -13,7 +13,7 @@ class EmailsTest extends BaseEndpointTest
             'email' => 'support@openprovider.nl'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $email);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $email);
     }
 
     /** @test */
@@ -25,7 +25,7 @@ class EmailsTest extends BaseEndpointTest
             'email' => 'support@openprovider.com',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => [0 => ['email' => 'support1@openprovider.nl', 'handle' => 'AB012345-NL', 'status' => 'verified', 'description' => '-', 'expirationDate' => '0000-00-00 00:00:00', 'domain' => 'openprovider1.com', 'isSuspended' => '0'], 1 => ['email' => 'support2@openprovider.nl', 'handle' => 'AB112345-NL', 'status' => 'failed', 'description' => 'expired', 'expirationDate' => '0000-00-00 00:00:00', 'domain' => 'openprovider2.com', 'isSuspended' => '1'], 2 => ['email' => 'support3@openprovider.nl', 'handle' => 'AB212345-NL', 'status' => 'in progress', 'description' => '-', 'expirationDate' => '2015-05-25 16:36:32', 'domain' => [], 'isSuspended' => '0']]]], 'total' => '3']]], $emails);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => [0 => ['email' => 'support1@openprovider.nl', 'handle' => 'AB012345-NL', 'status' => 'verified', 'description' => '-', 'expirationDate' => '0000-00-00 00:00:00', 'domain' => 'openprovider1.com', 'isSuspended' => '0'], 1 => ['email' => 'support2@openprovider.nl', 'handle' => 'AB112345-NL', 'status' => 'failed', 'description' => 'expired', 'expirationDate' => '0000-00-00 00:00:00', 'domain' => 'openprovider2.com', 'isSuspended' => '1'], 2 => ['email' => 'support3@openprovider.nl', 'handle' => 'AB212345-NL', 'status' => 'in progress', 'description' => '-', 'expirationDate' => '2015-05-25 16:36:32', 'domain' => [], 'isSuspended' => '0']]]], 'total' => '3']]], $emails);
     }
 
     /** @test */
@@ -37,6 +37,6 @@ class EmailsTest extends BaseEndpointTest
             'email' => 'support@openprovider.nl'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '10']]], $email);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '10']]], $email);
     }
 }

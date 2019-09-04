@@ -14,7 +14,7 @@ class TagsTest extends BaseEndpointTest
             'value' => 'value',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $tags);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $tags);
     }
 
     /** @test */
@@ -27,7 +27,7 @@ class TagsTest extends BaseEndpointTest
             'value' => 'value',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $tags);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $tags);
     }
 
     /** @test */
@@ -40,6 +40,6 @@ class TagsTest extends BaseEndpointTest
             'value' => 'customerA',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['key' => 'customer', 'value' => 'companyA']]], 'total' => '1']]], $tags);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['key' => 'customer', 'value' => 'companyA']]], 'total' => '1']]], $tags);
     }
 }

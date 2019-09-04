@@ -55,7 +55,7 @@ class CustomersTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['handle' => 'JH000001-US']]], $customer);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['handle' => 'JH000001-US']]], $customer);
     }
 
     /** @test */
@@ -67,7 +67,7 @@ class CustomersTest extends BaseEndpointTest
             'handle' => 'AJ001927-NL'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $customer);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $customer);
     }
 
     /** @test */
@@ -122,7 +122,7 @@ class CustomersTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => []]], $customer);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => []]], $customer);
     }
 
     /** @test */
@@ -134,7 +134,7 @@ class CustomersTest extends BaseEndpointTest
             'handle' => 'AJ001927-NL'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['companyName' => 'Hosting Unlimited', 'name' => ['initials' => 'J.B.', 'firstName' => 'John', 'prefix' => 'van', 'lastName' => 'Halen'], 'gender' => 'M', 'phone' => ['countryCode' => '+8', 'areaCode' => '383', 'subscriberNumber' => '1231212'], 'fax' => ['countryCode' => '+8', 'areaCode' => '383', 'subscriberNumber' => '1231213'], 'address' => ['street' => 'Main Street', 'number' => '2', 'zipcode' => '630060', 'city' => 'Washington', 'country' => 'US', 'suffix' => 'a'], 'email' => 'info@openprovider.nl', 'handle' => 'JH000001-US', 'comments' => []]]], $customer);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['companyName' => 'Hosting Unlimited', 'name' => ['initials' => 'J.B.', 'firstName' => 'John', 'prefix' => 'van', 'lastName' => 'Halen'], 'gender' => 'M', 'phone' => ['countryCode' => '+8', 'areaCode' => '383', 'subscriberNumber' => '1231212'], 'fax' => ['countryCode' => '+8', 'areaCode' => '383', 'subscriberNumber' => '1231213'], 'address' => ['street' => 'Main Street', 'number' => '2', 'zipcode' => '630060', 'city' => 'Washington', 'country' => 'US', 'suffix' => 'a'], 'email' => 'info@openprovider.nl', 'handle' => 'JH000001-US', 'comments' => []]]], $customer);
     }
 
     /** @test */
@@ -150,6 +150,6 @@ class CustomersTest extends BaseEndpointTest
             'companyNamePattern' => '*prov*'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['id' => '156384', 'companyName' => 'Hosting Unlimited', 'name' => ['initials' => 'J.B.', 'firstName' => 'John', 'prefix' => 'van', 'lastName' => 'Halen'], 'gender' => 'M', 'phone' => ['countryCode' => '+8', 'areaCode' => '383', 'subscriberNumber' => '1231212'], 'fax' => ['countryCode' => '+8', 'areaCode' => '383', 'subscriberNumber' => '1231213'], 'address' => ['street' => 'Main Street', 'number' => '2', 'zipcode' => '630060', 'city' => 'Washington', 'country' => 'US', 'suffix' => 'a'], 'email' => 'info@openprovider.nl', 'handle' => 'JH000001-US', 'comments' => []]]], 'total' => '1']]], $customers);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => ['id' => '156384', 'companyName' => 'Hosting Unlimited', 'name' => ['initials' => 'J.B.', 'firstName' => 'John', 'prefix' => 'van', 'lastName' => 'Halen'], 'gender' => 'M', 'phone' => ['countryCode' => '+8', 'areaCode' => '383', 'subscriberNumber' => '1231212'], 'fax' => ['countryCode' => '+8', 'areaCode' => '383', 'subscriberNumber' => '1231213'], 'address' => ['street' => 'Main Street', 'number' => '2', 'zipcode' => '630060', 'city' => 'Washington', 'country' => 'US', 'suffix' => 'a'], 'email' => 'info@openprovider.nl', 'handle' => 'JH000001-US', 'comments' => []]]], 'total' => '1']]], $customers);
     }
 }

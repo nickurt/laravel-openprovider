@@ -29,7 +29,7 @@ class ResellersTest extends BaseEndpointTest
             'email' => 'support@openprovider.nl',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '5391']]], $reseller);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '5391']]], $reseller);
     }
 
     /** @test */
@@ -41,7 +41,7 @@ class ResellersTest extends BaseEndpointTest
             'id' => 5390
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $reseller);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $reseller);
     }
 
     /** @test */
@@ -73,7 +73,7 @@ class ResellersTest extends BaseEndpointTest
             'email' => 'billing@openprovider.nl',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $reseller);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $reseller);
     }
 
     /** @test */
@@ -104,7 +104,7 @@ class ResellersTest extends BaseEndpointTest
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $reseller);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => '1']], $reseller);
     }
 
     /** @test */
@@ -116,7 +116,7 @@ class ResellersTest extends BaseEndpointTest
             'id' => 2292
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '2292', 'companyName' => [], 'name' => ['initials' => [], 'firstName' => 'Will', 'prefix' => [], 'lastName' => 'Black'], 'gender' => 'M', 'phone' => ['countryCode' => '+31', 'areaCode' => '10', 'subscriberNumber' => '4482292'], 'address' => ['street' => [], 'number' => [], 'zipcode' => [], 'city' => [], 'country' => 'NL'], 'email' => 'support@openprovider.nl', 'role' => 'admin', 'isActive' => '1', 'username' => 'willb']]], $reseller);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '2292', 'companyName' => [], 'name' => ['initials' => [], 'firstName' => 'Will', 'prefix' => [], 'lastName' => 'Black'], 'gender' => 'M', 'phone' => ['countryCode' => '+31', 'areaCode' => '10', 'subscriberNumber' => '4482292'], 'address' => ['street' => [], 'number' => [], 'zipcode' => [], 'city' => [], 'country' => 'NL'], 'email' => 'support@openprovider.nl', 'role' => 'admin', 'isActive' => '1', 'username' => 'willb']]], $reseller);
     }
 
     /** @test */
@@ -128,7 +128,7 @@ class ResellersTest extends BaseEndpointTest
             //
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '16342915', 'companyName' => 'Openprovider', 'vat' => 'NL809507882B01', 'phone' => ['countryCode' => '+31', 'areaCode' => '10', 'subscriberNumber' => '4482299'], 'address' => ['street' => 'Nieuwe Binnenweg', 'number' => '137', 'zipcode' => '3014 GJ', 'city' => 'Rotterdam', 'country' => 'NL', 'state' => 'Zuid-Holland'], 'balance' => '263.94']]], $reseller);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '16342915', 'companyName' => 'Openprovider', 'vat' => 'NL809507882B01', 'phone' => ['countryCode' => '+31', 'areaCode' => '10', 'subscriberNumber' => '4482299'], 'address' => ['street' => 'Nieuwe Binnenweg', 'number' => '137', 'zipcode' => '3014 GJ', 'city' => 'Rotterdam', 'country' => 'NL', 'state' => 'Zuid-Holland'], 'balance' => '263.94']]], $reseller);
     }
 
     /** @test */
@@ -140,7 +140,7 @@ class ResellersTest extends BaseEndpointTest
             //
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['currency' => 'EUR', 'language' => 'EN', 'isAutoRenewEnabled' => '1', 'minimumPayment' => '5000', 'minimumWesternUnionPayment' => '500', 'CreditCardFeePercent' => '3', 'maximumIDealPayment' => '1000', 'maximumCreditCardPayment' => '970', 'payMethods' => ['array' => ['item' => [0 => 'credit_card', 1 => 'western_union', 2 => 'bank']]], 'signedContracts' => ['array' => ['item' => [0 => ['id' => 'eu', 'version' => '20060221', 'modificationDate' => '2006-02-21 14:33:32', 'isSigned' => '1', 'signOnDate' => '2006-11-13 11:47:45'], 1 => ['id' => 'com', 'version' => '20060221', 'modificationDate' => '2006-02-21 14:33:32', 'isSigned' => '1', 'signOnDate' => '2006-09-15 11:07:23'], 2 => ['id' => 'info', 'version' => '20060221', 'modificationDate' => '2006-02-21 14:33:32', 'isSigned' => '1', 'signOnDate' => '2007-06-14 15:01:49']]]]]]], $reseller);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['currency' => 'EUR', 'language' => 'EN', 'isAutoRenewEnabled' => '1', 'minimumPayment' => '5000', 'minimumWesternUnionPayment' => '500', 'CreditCardFeePercent' => '3', 'maximumIDealPayment' => '1000', 'maximumCreditCardPayment' => '970', 'payMethods' => ['array' => ['item' => [0 => 'credit_card', 1 => 'western_union', 2 => 'bank']]], 'signedContracts' => ['array' => ['item' => [0 => ['id' => 'eu', 'version' => '20060221', 'modificationDate' => '2006-02-21 14:33:32', 'isSigned' => '1', 'signOnDate' => '2006-11-13 11:47:45'], 1 => ['id' => 'com', 'version' => '20060221', 'modificationDate' => '2006-02-21 14:33:32', 'isSigned' => '1', 'signOnDate' => '2006-09-15 11:07:23'], 2 => ['id' => 'info', 'version' => '20060221', 'modificationDate' => '2006-02-21 14:33:32', 'isSigned' => '1', 'signOnDate' => '2007-06-14 15:01:49']]]]]]], $reseller);
     }
 
     /** @test */
@@ -152,7 +152,7 @@ class ResellersTest extends BaseEndpointTest
             //
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['customer' => ['total' => '447', 'modified' => '2016-06-17 13:13:02'], 'currency' => ['modified' => '2010-08-01 09:30:54'], 'domain' => ['byStatus' => ['ACT' => '11', 'FAI' => '24', 'PEN' => '0', 'REQ' => '3'], 'total' => '42'], 'ssl' => ['byStatus' => ['ACT' => '1', 'FAI' => '73', 'PEN' => '0', 'REQ' => '13'], 'total' => '100'], 'dns' => ['total' => '1433'], 'spamExperts' => ['exists' => '1', 'status' => 'deleted', 'incomingCount' => '0', 'incomingLimit' => '10', 'outgoingCount' => '0', 'outgoingLimit' => '1', 'withOutgoingFilter' => '1', 'createdAt' => '2012-10-29 10:48:30', 'activatedAt' => '2012-10-29 10:48:30', 'expiredAt' => '2016-04-05 08:50:34'], 'license' => ['total' => '0']]]], $reseller);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['customer' => ['total' => '447', 'modified' => '2016-06-17 13:13:02'], 'currency' => ['modified' => '2010-08-01 09:30:54'], 'domain' => ['byStatus' => ['ACT' => '11', 'FAI' => '24', 'PEN' => '0', 'REQ' => '3'], 'total' => '42'], 'ssl' => ['byStatus' => ['ACT' => '1', 'FAI' => '73', 'PEN' => '0', 'REQ' => '13'], 'total' => '100'], 'dns' => ['total' => '1433'], 'spamExperts' => ['exists' => '1', 'status' => 'deleted', 'incomingCount' => '0', 'incomingLimit' => '10', 'outgoingCount' => '0', 'outgoingLimit' => '1', 'withOutgoingFilter' => '1', 'createdAt' => '2012-10-29 10:48:30', 'activatedAt' => '2012-10-29 10:48:30', 'expiredAt' => '2016-04-05 08:50:34'], 'license' => ['total' => '0']]]], $reseller);
     }
 
     /** @test */
@@ -166,6 +166,6 @@ class ResellersTest extends BaseEndpointTest
             'role' => 'tech',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['customer' => ['total' => '447', 'modified' => '2016-06-17 13:13:02'], 'currency' => ['modified' => '2010-08-01 09:30:54'], 'domain' => ['byStatus' => ['ACT' => '11', 'FAI' => '24', 'PEN' => '0', 'REQ' => '3'], 'total' => '42'], 'ssl' => ['byStatus' => ['ACT' => '1', 'FAI' => '73', 'PEN' => '0', 'REQ' => '13'], 'total' => '100'], 'dns' => ['total' => '1433'], 'spamExperts' => ['exists' => '1', 'status' => 'deleted', 'incomingCount' => '0', 'incomingLimit' => '10', 'outgoingCount' => '0', 'outgoingLimit' => '1', 'withOutgoingFilter' => '1', 'createdAt' => '2012-10-29 10:48:30', 'activatedAt' => '2012-10-29 10:48:30', 'expiredAt' => '2016-04-05 08:50:34'], 'license' => ['total' => '0']]]], $reseller);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['customer' => ['total' => '447', 'modified' => '2016-06-17 13:13:02'], 'currency' => ['modified' => '2010-08-01 09:30:54'], 'domain' => ['byStatus' => ['ACT' => '11', 'FAI' => '24', 'PEN' => '0', 'REQ' => '3'], 'total' => '42'], 'ssl' => ['byStatus' => ['ACT' => '1', 'FAI' => '73', 'PEN' => '0', 'REQ' => '13'], 'total' => '100'], 'dns' => ['total' => '1433'], 'spamExperts' => ['exists' => '1', 'status' => 'deleted', 'incomingCount' => '0', 'incomingLimit' => '10', 'outgoingCount' => '0', 'outgoingLimit' => '1', 'withOutgoingFilter' => '1', 'createdAt' => '2012-10-29 10:48:30', 'activatedAt' => '2012-10-29 10:48:30', 'expiredAt' => '2016-04-05 08:50:34'], 'license' => ['total' => '0']]]], $reseller);
     }
 }

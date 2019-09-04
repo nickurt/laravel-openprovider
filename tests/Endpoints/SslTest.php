@@ -13,7 +13,7 @@ class SslTest extends BaseEndpointTest
             'id' => 12345,
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '12345']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '12345']]], $ssl);
     }
 
     /** @test */
@@ -26,7 +26,7 @@ class SslTest extends BaseEndpointTest
             'approverEmail' => 'info@openprovider.nl',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '12345']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '12345']]], $ssl);
     }
 
     /** @test */
@@ -55,7 +55,7 @@ kUaUx8Z21OOaoYjlHZTUaGfX5VKjjKH3NZ373Xms6Y9PcbX2nhvfo8IFSgnWKXD8
             'approverEmail' => 'info@openprovider.nl'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '2480']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '2480']]], $ssl);
     }
 
     /** @test */
@@ -85,7 +85,7 @@ WxwuLA==
 -----END CERTIFICATE REQUEST-----',
         ]);
 
-        $this->assertArraySubset(json_decode(file_get_contents(__DIR__ . '/__snapshots__/it_can_do_a_decode_csr_ssl_cert_request.json'), true), $ssl);
+        $this->assertSame(json_decode(file_get_contents(__DIR__ . '/__snapshots__/it_can_do_a_decode_csr_ssl_cert_request.json'), true), $ssl);
     }
 
     /** @test */
@@ -99,7 +99,7 @@ WxwuLA==
             'country' => 'US',
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['command' => 'openssl req -new  -newkey rsa:2048 -nodes -out your.csr -keyout your.private.key -subj "/C=US/ST=/L=/O=/OU=/CN=test.com/emailAddress=""', 'key' => '-----BEGIN PRIVATE KEY-----BASE64PRIVATEKEYHERE-----END PRIVATE KEY-----', 'csr' => '-----BEGIN CERTIFICATE REQUEST-----BASE64CSRHERE-----END CERTIFICATE REQUEST-----']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['command' => 'openssl req -new  -newkey rsa:2048 -nodes -out your.csr -keyout your.private.key -subj "/C=US/ST=/L=/O=/OU=/CN=test.com/emailAddress=""', 'key' => '-----BEGIN PRIVATE KEY-----BASE64PRIVATEKEYHERE-----END PRIVATE KEY-----', 'csr' => '-----BEGIN CERTIFICATE REQUEST-----BASE64CSRHERE-----END CERTIFICATE REQUEST-----']]], $ssl);
     }
 
     /** @test */
@@ -111,7 +111,7 @@ WxwuLA==
             'id' => 5,
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['uri' => 'https://sslpanel.io/auth-order-otp-token', 'token' => 'aqlFgU8wHHAD0fGCDvS2iUlsou5bq0LY', 'expireAt' => '2017-02-02 09:10:04']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['uri' => 'https://sslpanel.io/auth-order-otp-token', 'token' => 'aqlFgU8wHHAD0fGCDvS2iUlsou5bq0LY', 'expireAt' => '2017-02-02 09:10:04']]], $ssl);
     }
 
     /** @test */
@@ -129,7 +129,7 @@ WxwuLA==
             ],
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '2480']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '2480']]], $ssl);
     }
 
     /** @test */
@@ -166,7 +166,7 @@ ql4PFDPxDgmaPGjXsSj1w/K28wTTiQxIxd8jvk9UJTKHTNB5dnQCafFzidkcWuQx
             'approverEmail' => 'info@openprovider.nl'
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '12345']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '12345']]], $ssl);
     }
 
     /** @test */
@@ -178,7 +178,7 @@ ql4PFDPxDgmaPGjXsSj1w/K28wTTiQxIxd8jvk9UJTKHTNB5dnQCafFzidkcWuQx
             'id' => 5,
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '5']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '5']]], $ssl);
     }
 
     /** @test */
@@ -190,7 +190,7 @@ ql4PFDPxDgmaPGjXsSj1w/K28wTTiQxIxd8jvk9UJTKHTNB5dnQCafFzidkcWuQx
             'id' => 12345,
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '12345']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '12345']]], $ssl);
     }
 
     /** @test */
@@ -203,7 +203,7 @@ ql4PFDPxDgmaPGjXsSj1w/K28wTTiQxIxd8jvk9UJTKHTNB5dnQCafFzidkcWuQx
             'productId' => 1,
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => [0 => 'admin@openprovider.com', 1 => 'webmaster@openprovider.com', 2 => 'hostmaster@openprovider.com']]]]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => [0 => 'admin@openprovider.com', 1 => 'webmaster@openprovider.com', 2 => 'hostmaster@openprovider.com']]]]], $ssl);
     }
 
     /** @test */
@@ -215,7 +215,7 @@ ql4PFDPxDgmaPGjXsSj1w/K28wTTiQxIxd8jvk9UJTKHTNB5dnQCafFzidkcWuQx
             'id' => 1864
         ]);
 
-        $this->assertArraySubset(json_decode(file_get_contents(__DIR__ . '/__snapshots__/it_can_do_a_retrieve_order_ssl_cert_request.json'), true), $ssl);
+        $this->assertSame(json_decode(file_get_contents(__DIR__ . '/__snapshots__/it_can_do_a_retrieve_order_ssl_cert_request.json'), true), $ssl);
     }
 
     /** @test */
@@ -227,7 +227,7 @@ ql4PFDPxDgmaPGjXsSj1w/K28wTTiQxIxd8jvk9UJTKHTNB5dnQCafFzidkcWuQx
             'id' => 8
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '8', 'name' => 'QuickSSL Premium', 'brandName' => 'GeoTrust', 'category' => 'domain_validation', 'isMobileSupported' => '1', 'isIdnSupported' => '0', 'isSgcSupported' => '0', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '10m', 'freeRefundPeriod' => '7d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '40/256 bits', 'root' => 'Equifax Secure CA', 'warranty' => ['product' => ['price' => '100000.00', 'currency' => 'USD'], 'reseller' => ['price' => '77207.91', 'currency' => 'EUR']], 'supportedSoftware' => ['array' => ['item' => [0 => ['id' => 'apachessl', 'title' => 'Apache + MOD SSL'], 1 => ['id' => 'apacheraven', 'title' => 'Apache + Raven'], 2 => ['id' => 'apachessleay', 'title' => 'Apache + SSLeay'], 3 => ['id' => 'c2net', 'title' => 'C2Net Stronghold'], 4 => ['id' => 'Ibmhttp', 'title' => 'IBM HTTP'], 5 => ['id' => 'Iplanet', 'title' => 'iPlanet Server 4.1'], 6 => ['id' => 'Dominogo4625', 'title' => 'Lotus Domino Go 4.6.2.51'], 7 => ['id' => 'Dominogo4626', 'title' => 'Lotus Domino Go 4.6.2.6+'], 8 => ['id' => 'Domino', 'title' => 'Lotus Domino 4.6+'], 9 => ['id' => 'iis4', 'title' => 'Microsoft IIS 4.0'], 10 => ['id' => 'iis5', 'title' => 'Microsoft IIS 5.0'], 11 => ['id' => 'Netscape', 'title' => 'Netscape Enterprise/FastTrack'], 12 => ['id' => 'zeusv3', 'title' => 'Zeus v3+'], 13 => ['id' => 'Other', 'title' => 'Other'], 14 => ['id' => 'apacheopenssl', 'title' => 'Apache + OpenSSL'], 15 => ['id' => 'apache2', 'title' => 'Apache 2'], 16 => ['id' => 'apacheapachessl', 'title' => 'Apache + ApacheSSL'], 17 => ['id' => 'cobaltseries', 'title' => 'Cobalt Series'], 18 => ['id' => 'cpanel', 'title' => 'Cpanel'], 19 => ['id' => 'ensim', 'title' => 'Ensim'], 20 => ['id' => 'hsphere', 'title' => 'Hsphere'], 21 => ['id' => 'ipswitch ', 'title' => 'Ipswitch'], 22 => ['id' => 'plesk', 'title' => 'Plesk'], 23 => ['id' => 'tomcat', 'title' => 'Jakart-Tomcat'], 24 => ['id' => 'WebLogic', 'title' => 'WebLogic - all versions'], 25 => ['id' => 'website', 'title' => 'O\'Reilly WebSite Professional'], 26 => ['id' => 'webstar', 'title' => 'WebStar'], 27 => ['id' => 'iis', 'title' => 'Microsoft Internet Information Server']]]], 'description' => 'A QuickSSL Premium SSL certificate exactly does what its name suggests: securing your website without having to wait for a long validation process. This SSL certificate also secures connections with most mobile browsers. The warranty of a QuickSSL Premium certificate is $ 100.000.', 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '79.00', 'currency' => 'EUR'], 'reseller' => ['price' => '79.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '139.00', 'currency' => 'EUR'], 'reseller' => ['price' => '139.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '199.00', 'currency' => 'EUR'], 'reseller' => ['price' => '199.00', 'currency' => 'EUR']]]]]]]]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['id' => '8', 'name' => 'QuickSSL Premium', 'brandName' => 'GeoTrust', 'category' => 'domain_validation', 'isMobileSupported' => '1', 'isIdnSupported' => '0', 'isSgcSupported' => '0', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '10m', 'freeRefundPeriod' => '7d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '40/256 bits', 'root' => 'Equifax Secure CA', 'warranty' => ['product' => ['price' => '100000.00', 'currency' => 'USD'], 'reseller' => ['price' => '77207.91', 'currency' => 'EUR']], 'supportedSoftware' => ['array' => ['item' => [0 => ['id' => 'apachessl', 'title' => 'Apache + MOD SSL'], 1 => ['id' => 'apacheraven', 'title' => 'Apache + Raven'], 2 => ['id' => 'apachessleay', 'title' => 'Apache + SSLeay'], 3 => ['id' => 'c2net', 'title' => 'C2Net Stronghold'], 4 => ['id' => 'Ibmhttp', 'title' => 'IBM HTTP'], 5 => ['id' => 'Iplanet', 'title' => 'iPlanet Server 4.1'], 6 => ['id' => 'Dominogo4625', 'title' => 'Lotus Domino Go 4.6.2.51'], 7 => ['id' => 'Dominogo4626', 'title' => 'Lotus Domino Go 4.6.2.6+'], 8 => ['id' => 'Domino', 'title' => 'Lotus Domino 4.6+'], 9 => ['id' => 'iis4', 'title' => 'Microsoft IIS 4.0'], 10 => ['id' => 'iis5', 'title' => 'Microsoft IIS 5.0'], 11 => ['id' => 'Netscape', 'title' => 'Netscape Enterprise/FastTrack'], 12 => ['id' => 'zeusv3', 'title' => 'Zeus v3+'], 13 => ['id' => 'Other', 'title' => 'Other'], 14 => ['id' => 'apacheopenssl', 'title' => 'Apache + OpenSSL'], 15 => ['id' => 'apache2', 'title' => 'Apache 2'], 16 => ['id' => 'apacheapachessl', 'title' => 'Apache + ApacheSSL'], 17 => ['id' => 'cobaltseries', 'title' => 'Cobalt Series'], 18 => ['id' => 'cpanel', 'title' => 'Cpanel'], 19 => ['id' => 'ensim', 'title' => 'Ensim'], 20 => ['id' => 'hsphere', 'title' => 'Hsphere'], 21 => ['id' => 'ipswitch ', 'title' => 'Ipswitch'], 22 => ['id' => 'plesk', 'title' => 'Plesk'], 23 => ['id' => 'tomcat', 'title' => 'Jakart-Tomcat'], 24 => ['id' => 'WebLogic', 'title' => 'WebLogic - all versions'], 25 => ['id' => 'website', 'title' => 'O\'Reilly WebSite Professional'], 26 => ['id' => 'webstar', 'title' => 'WebStar'], 27 => ['id' => 'iis', 'title' => 'Microsoft Internet Information Server']]]], 'description' => 'A QuickSSL Premium SSL certificate exactly does what its name suggests: securing your website without having to wait for a long validation process. This SSL certificate also secures connections with most mobile browsers. The warranty of a QuickSSL Premium certificate is $ 100.000.', 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '79.00', 'currency' => 'EUR'], 'reseller' => ['price' => '79.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '139.00', 'currency' => 'EUR'], 'reseller' => ['price' => '139.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '199.00', 'currency' => 'EUR'], 'reseller' => ['price' => '199.00', 'currency' => 'EUR']]]]]]]]], $ssl);
     }
 
     /** @test */
@@ -239,7 +239,7 @@ ql4PFDPxDgmaPGjXsSj1w/K28wTTiQxIxd8jvk9UJTKHTNB5dnQCafFzidkcWuQx
             'id' => 12345,
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => [0 => 'admin@openprovider.com', 1 => 'domreg@openprovider.com']]]]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['array' => ['item' => [0 => 'admin@openprovider.com', 1 => 'domreg@openprovider.com']]]]], $ssl);
     }
 
     /** @test */
@@ -253,7 +253,7 @@ ql4PFDPxDgmaPGjXsSj1w/K28wTTiQxIxd8jvk9UJTKHTNB5dnQCafFzidkcWuQx
             ]
         ]);
 
-        $this->assertArraySubset(json_decode(file_get_contents(__DIR__ . '/__snapshots__/it_can_do_a_search_order_ssl_cert_request.json'), true), $ssl);
+        $this->assertSame(json_decode(file_get_contents(__DIR__ . '/__snapshots__/it_can_do_a_search_order_ssl_cert_request.json'), true), $ssl);
     }
 
     /** @test */
@@ -266,6 +266,6 @@ ql4PFDPxDgmaPGjXsSj1w/K28wTTiQxIxd8jvk9UJTKHTNB5dnQCafFzidkcWuQx
             'withPrice' => true
         ]);
 
-        $this->assertArraySubset(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => [0 => ['id' => '25', 'name' => 'Instant SGC SSL', 'brandName' => 'Comodo', 'category' => 'organization_validation', 'isMobileSupported' => '0', 'isIdnSupported' => '0', 'isSgcSupported' => '1', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '2d', 'freeRefundPeriod' => '30d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '40/256 bits', 'root' => 'Chained root', 'warranty' => ['product' => ['price' => '250000.00', 'currency' => 'USD'], 'reseller' => ['price' => '193019.77', 'currency' => 'EUR']], 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '249.00', 'currency' => 'EUR'], 'reseller' => ['price' => '249.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '429.00', 'currency' => 'EUR'], 'reseller' => ['price' => '429.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '599.00', 'currency' => 'EUR'], 'reseller' => ['price' => '599.00', 'currency' => 'EUR']]], 3 => ['period' => '4', 'price' => ['product' => ['price' => '749.00', 'currency' => 'EUR'], 'reseller' => ['price' => '749.00', 'currency' => 'EUR']]], 4 => ['period' => '5', 'price' => ['product' => ['price' => '849.00', 'currency' => 'EUR'], 'reseller' => ['price' => '849.00', 'currency' => 'EUR']]]]]]], 1 => ['id' => '18', 'name' => 'SGC SuperCert', 'brandName' => 'thawte', 'category' => 'organization_validation', 'isMobileSupported' => '1', 'isIdnSupported' => '1', 'isSgcSupported' => '1', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '48h', 'freeRefundPeriod' => '30d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '40/256 bits', 'root' => 'Primary certification aut', 'warranty' => ['product' => ['price' => '0.00', 'currency' => 'USD'], 'reseller' => ['price' => '0.00', 'currency' => 'EUR']], 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '279.00', 'currency' => 'EUR'], 'reseller' => ['price' => '279.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '479.00', 'currency' => 'EUR'], 'reseller' => ['price' => '479.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '679.00', 'currency' => 'EUR'], 'reseller' => ['price' => '679.00', 'currency' => 'EUR']]], 3 => ['period' => '4', 'price' => ['product' => ['price' => '869.00', 'currency' => 'EUR'], 'reseller' => ['price' => '869.00', 'currency' => 'EUR']]], 4 => ['period' => '5', 'price' => ['product' => ['price' => '999.00', 'currency' => 'EUR'], 'reseller' => ['price' => '999.00', 'currency' => 'EUR']]]]]]], 2 => ['id' => '1', 'name' => 'Secure Site', 'brandName' => 'VeriSign', 'category' => 'organization_validation', 'isMobileSupported' => '1', 'isIdnSupported' => '1', 'isSgcSupported' => '0', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '2d', 'freeRefundPeriod' => '30d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '40/256 bits', 'root' => 'Class 3 Public Primary CA', 'warranty' => ['product' => ['price' => '100000.00', 'currency' => 'USD'], 'reseller' => ['price' => '77207.91', 'currency' => 'EUR']], 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '275.00', 'currency' => 'EUR'], 'reseller' => ['price' => '275.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '499.00', 'currency' => 'EUR'], 'reseller' => ['price' => '499.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '699.00', 'currency' => 'EUR'], 'reseller' => ['price' => '699.00', 'currency' => 'EUR']]], 3 => ['period' => '4', 'price' => ['product' => ['price' => '879.00', 'currency' => 'EUR'], 'reseller' => ['price' => '879.00', 'currency' => 'EUR']]], 4 => ['period' => '5', 'price' => ['product' => ['price' => '1049.00', 'currency' => 'EUR'], 'reseller' => ['price' => '1049.00', 'currency' => 'EUR']]]]]]], 3 => ['id' => '2', 'name' => 'Secure Site Pro', 'brandName' => 'VeriSign', 'category' => 'organization_validation', 'isMobileSupported' => '1', 'isIdnSupported' => '1', 'isSgcSupported' => '1', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '2d', 'freeRefundPeriod' => '30d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '128/256 bits', 'root' => 'Class 3 Public Primary CA', 'warranty' => ['product' => ['price' => '100000.00', 'currency' => 'USD'], 'reseller' => ['price' => '77207.91', 'currency' => 'EUR']], 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '599.00', 'currency' => 'EUR'], 'reseller' => ['price' => '599.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '1049.00', 'currency' => 'EUR'], 'reseller' => ['price' => '1049.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '1499.00', 'currency' => 'EUR'], 'reseller' => ['price' => '1499.00', 'currency' => 'EUR']]], 3 => ['period' => '4', 'price' => ['product' => ['price' => '1899.00', 'currency' => 'EUR'], 'reseller' => ['price' => '1899.00', 'currency' => 'EUR']]], 4 => ['period' => '5', 'price' => ['product' => ['price' => '2199.00', 'currency' => 'EUR'], 'reseller' => ['price' => '2199.00', 'currency' => 'EUR']]]]]]]]]], 'total' => '4']]], $ssl);
+        $this->assertSame(['reply' => ['code' => '0', 'desc' => [], 'data' => ['results' => ['array' => ['item' => [0 => ['id' => '25', 'name' => 'Instant SGC SSL', 'brandName' => 'Comodo', 'category' => 'organization_validation', 'isMobileSupported' => '0', 'isIdnSupported' => '0', 'isSgcSupported' => '1', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '2d', 'freeRefundPeriod' => '30d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '40/256 bits', 'root' => 'Chained root', 'warranty' => ['product' => ['price' => '250000.00', 'currency' => 'USD'], 'reseller' => ['price' => '193019.77', 'currency' => 'EUR']], 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '249.00', 'currency' => 'EUR'], 'reseller' => ['price' => '249.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '429.00', 'currency' => 'EUR'], 'reseller' => ['price' => '429.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '599.00', 'currency' => 'EUR'], 'reseller' => ['price' => '599.00', 'currency' => 'EUR']]], 3 => ['period' => '4', 'price' => ['product' => ['price' => '749.00', 'currency' => 'EUR'], 'reseller' => ['price' => '749.00', 'currency' => 'EUR']]], 4 => ['period' => '5', 'price' => ['product' => ['price' => '849.00', 'currency' => 'EUR'], 'reseller' => ['price' => '849.00', 'currency' => 'EUR']]]]]]], 1 => ['id' => '18', 'name' => 'SGC SuperCert', 'brandName' => 'thawte', 'category' => 'organization_validation', 'isMobileSupported' => '1', 'isIdnSupported' => '1', 'isSgcSupported' => '1', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '48h', 'freeRefundPeriod' => '30d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '40/256 bits', 'root' => 'Primary certification aut', 'warranty' => ['product' => ['price' => '0.00', 'currency' => 'USD'], 'reseller' => ['price' => '0.00', 'currency' => 'EUR']], 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '279.00', 'currency' => 'EUR'], 'reseller' => ['price' => '279.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '479.00', 'currency' => 'EUR'], 'reseller' => ['price' => '479.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '679.00', 'currency' => 'EUR'], 'reseller' => ['price' => '679.00', 'currency' => 'EUR']]], 3 => ['period' => '4', 'price' => ['product' => ['price' => '869.00', 'currency' => 'EUR'], 'reseller' => ['price' => '869.00', 'currency' => 'EUR']]], 4 => ['period' => '5', 'price' => ['product' => ['price' => '999.00', 'currency' => 'EUR'], 'reseller' => ['price' => '999.00', 'currency' => 'EUR']]]]]]], 2 => ['id' => '1', 'name' => 'Secure Site', 'brandName' => 'VeriSign', 'category' => 'organization_validation', 'isMobileSupported' => '1', 'isIdnSupported' => '1', 'isSgcSupported' => '0', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '2d', 'freeRefundPeriod' => '30d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '40/256 bits', 'root' => 'Class 3 Public Primary CA', 'warranty' => ['product' => ['price' => '100000.00', 'currency' => 'USD'], 'reseller' => ['price' => '77207.91', 'currency' => 'EUR']], 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '275.00', 'currency' => 'EUR'], 'reseller' => ['price' => '275.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '499.00', 'currency' => 'EUR'], 'reseller' => ['price' => '499.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '699.00', 'currency' => 'EUR'], 'reseller' => ['price' => '699.00', 'currency' => 'EUR']]], 3 => ['period' => '4', 'price' => ['product' => ['price' => '879.00', 'currency' => 'EUR'], 'reseller' => ['price' => '879.00', 'currency' => 'EUR']]], 4 => ['period' => '5', 'price' => ['product' => ['price' => '1049.00', 'currency' => 'EUR'], 'reseller' => ['price' => '1049.00', 'currency' => 'EUR']]]]]]], 3 => ['id' => '2', 'name' => 'Secure Site Pro', 'brandName' => 'VeriSign', 'category' => 'organization_validation', 'isMobileSupported' => '1', 'isIdnSupported' => '1', 'isSgcSupported' => '1', 'isWildcardSupported' => '0', 'isExtendedValidationSupported' => '0', 'deliveryTime' => '2d', 'freeRefundPeriod' => '30d', 'freeReissuePeriod' => 'lifetime', 'maxPeriod' => '5', 'numberOfDomains' => '1', 'encryption' => '128/256 bits', 'root' => 'Class 3 Public Primary CA', 'warranty' => ['product' => ['price' => '100000.00', 'currency' => 'USD'], 'reseller' => ['price' => '77207.91', 'currency' => 'EUR']], 'prices' => ['array' => ['item' => [0 => ['period' => '1', 'price' => ['product' => ['price' => '599.00', 'currency' => 'EUR'], 'reseller' => ['price' => '599.00', 'currency' => 'EUR']]], 1 => ['period' => '2', 'price' => ['product' => ['price' => '1049.00', 'currency' => 'EUR'], 'reseller' => ['price' => '1049.00', 'currency' => 'EUR']]], 2 => ['period' => '3', 'price' => ['product' => ['price' => '1499.00', 'currency' => 'EUR'], 'reseller' => ['price' => '1499.00', 'currency' => 'EUR']]], 3 => ['period' => '4', 'price' => ['product' => ['price' => '1899.00', 'currency' => 'EUR'], 'reseller' => ['price' => '1899.00', 'currency' => 'EUR']]], 4 => ['period' => '5', 'price' => ['product' => ['price' => '2199.00', 'currency' => 'EUR'], 'reseller' => ['price' => '2199.00', 'currency' => 'EUR']]]]]]]]]], 'total' => '4']]], $ssl);
     }
 }
