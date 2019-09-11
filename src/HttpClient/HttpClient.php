@@ -20,14 +20,6 @@ class HttpClient implements HttpClientInterface
     protected $options = [];
 
     /**
-     * HttpClient constructor.
-     */
-    public function __construct()
-    {
-        $this->client = new \GuzzleHttp\Client();
-    }
-
-    /**
      * @return \GuzzleHttp\Client
      */
     public function getClient()
