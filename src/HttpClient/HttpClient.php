@@ -12,12 +12,12 @@ class HttpClient implements HttpClientInterface
     /**
      * @var array
      */
-    protected $options = [];
+    protected $headers = [];
 
     /**
      * @var array
      */
-    protected $headers = [];
+    protected $options = [];
 
     /**
      * HttpClient constructor.
@@ -25,6 +25,28 @@ class HttpClient implements HttpClientInterface
     public function __construct()
     {
         $this->client = new \GuzzleHttp\Client();
+    }
+
+    /**
+     * @return \GuzzleHttp\Client
+     */
+    public function getClient()
+    {
+        if (!isset($this->client)) {
+            $this->client = new \GuzzleHttp\Client();
+
+            return $this->client;
+        }
+
+        return $this->client;
+    }
+
+    /**
+     * @param $client
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
     }
 
     /**
@@ -45,7 +67,7 @@ class HttpClient implements HttpClientInterface
      */
     public function request($body, $method)
     {
-        $response = $this->client->request(
+        $response = $this->getClient()->request(
             $method,
             $this->getOptions()['base_url'],
             [
@@ -87,13 +109,5 @@ class HttpClient implements HttpClientInterface
     public function setHeaders(array $headers)
     {
         $this->headers = array_merge($this->headers, $headers);
-    }
-
-    /**
-     * @param $client
-     */
-    public function setClient($client)
-    {
-        $this->client = $client;
     }
 }
