@@ -1,8 +1,9 @@
 ## Laravel OpenProvider
-[![Latest Stable Version](https://poser.pugx.org/nickurt/laravel-openprovider/v/stable?format=flat-square)](https://packagist.org/packages/nickurt/laravel-openprovider)
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/nickurt/laravel-openprovider/master.svg?style=flat-square)](https://travis-ci.org/nickurt/laravel-openprovider)
-[![Total Downloads](https://img.shields.io/packagist/dt/nickurt/laravel-openprovider.svg?style=flat-square)](https://packagist.org/packages/nickurt/laravel-openprovider)
+[![Build Status](https://github.com/nickurt/laravel-openprovider/workflows/tests/badge.svg)](https://github.com/nickurt/laravel-openprovider/actions)
+[![Total Downloads](https://poser.pugx.org/nickurt/laravel-openprovider/d/total.svg)](https://packagist.org/packages/nickurt/laravel-openprovider)
+[![Latest Stable Version](https://poser.pugx.org/nickurt/laravel-openprovider/v/stable.svg)](https://packagist.org/packages/nickurt/laravel-openprovider)
+[![MIT Licensed](https://poser.pugx.org/nickurt/laravel-openprovider/license.svg)](LICENSE.md)
+
 ### Table of contents
 - [Installation](#installation)
 - [Usage](#usage)
